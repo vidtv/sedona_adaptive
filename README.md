@@ -1,0 +1,1 @@
+Adaptive site "Sedona" with mobile, tablet and desktop versions
