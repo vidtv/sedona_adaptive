@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Make a feedback</title>
+    </head>
+    <body>
+        <header class="page-header">
+            <a class="page-header__logo">
+                <img class="page-header__logo-image" src="main.svg" width="102" height="83" alt="Sedona">
+            </a>
+            <nav class="main-nav">
+                <button class="main-nav__open" type="button">Open</button>
+                <div class="main-nav__wrapper">
+                    <ul class="main-nav__list site-list">
+                        <li class="site-list__item site-list__item--active">
+                            <a href="index.html">Главная</a>
+                        </li>
+                        <li class="site-list__item">
+                            <a href="photo.html">Фото и видео</a>
+                        </li>
+                        <li class="site-list__item">
+                            <a>Форма отзыва</a>
+                        </li>
+                        <li class="site-list__item">
+                            <a href="https://htmlacademy.ru">HTML Academy</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <main class="main-page">
+            <header class="feedback-preview">
+                <b class="feedback-preview__title">Оставьте свой отзыв</b>
+                <p class="feedback__desc">Помогите нашим отелям стать лучше! оставьте отзыв о них,
+                    а также о посещенных вами достопримечательностях</p>
+            </header>
+            <form class="feedback-form" action="https://echo.htmlacademy.ru">
+                <section class="feedback__author">
+                    <b class="feedback__title">Представьтесь</b>
+                    <div class="feedback__name">
+                        <label class="feedback__label feedback__label--name" for="feedback__input--name">Имя:*</label>
+                        <input class="feedback__input feedback__input--name" id="feedback__input--name" type="text" value="Петр">
+                    </div>
+                    <div class="feedback__surname">
+                        <label class="feedback__label feedback__label--surname" for="feedback__label--surname">Фамилия:*</label>
+                        <input class="feedback__input feedback__input--surname" id="feedback__label--surname" type="text" value="Иванов">
+                    </div>
+                    <div class="feedback__patronymic">
+                        <label class="feedback__label feedback__label--patronymic" for="feedback__label--patronymic">Отчество:</label>
+                        <input class="feedback__input feedback__input--name" id="feedback__label--patronymic" type="text" value="Александрович">
+                    </div>
+                </section>
+                <section class="feedback__contacts">
+                    <b class="feedback__title">Контактная информация:</b>
+                    <div class="feedback__phone">
+                        <label class="feedback__label feedback__label--phone" for="feedback__input--phone">Контактный телефон*:</label>
+                        <input class="feedback__input feedback__input--phone" id="feedback__input--phone" type="text" placeholder="Введите телефон">
+                    </div>
+                    <div class="feedback__email">
+                        <label class="feedback__label feedback__label--email" for="feedback__input--email">Контактный телефон*:</label>
+                        <input class="feedback__input feedback__input--email" id="feedback__input--email" type="text" placeholder="Введите e-mail">
+                    </div>
+                </section>
+                <section class="feedback__impression">
+                    <b class="feedback__title">Ваше общее впечатление:</b>
+                    <div class="feedback__positive">
+                        <input class="feedback__radio feedback__radio--checked feedback__input--checked" id="feedback__radio--positive"
+                               type="radio" name="impression" checked>
+                        <label class="feedback__label feedback__label--positive" for="feedback__radio--positive">Скорее положительное</label>
+                    </div>
+                    <div class="feedback__negative">
+                        <input class="feedback__radio feedback__radio" id="feedback__radio--negative" type="radio" name="impression">
+                        <label class="feedback__label feedback__label--negative" for="feedback__radio--negative">Скорее негативное</label>
+                    </div>
+                    <div class="feedback__dunno">
+                        <input class="feedback__radio feedback__radio--dunno" id="feedback__radio--dunno" type="radio" name="impression">
+                        <label class="feedback__label feedback__label--dunno" for="feedback__radio--dunno">Скорее негативное</label>
+                    </div>
+                </section>
+                <section class="feedback__sights">
+                    <b class="feedback__title">Посещенные достопримечательности:</b>
+                    <div class="feedback__devil-bridge">
+                        <input class="feedback__checkbox feedback__checkbox--checked" id="feedback__devil-bridge"
+                               type="checkbox" name="devil-bridge" checked>
+                        <label class="feedback__label feedback__label--devil-bridge" for="feedback__devil-bridge">Мост Дьявола</label>
+                    </div>
+                    <div class="feedback__mountain">
+                        <input class="feedback__checkbox feedback__checkbox--checked" id="feedback__mountain" type="checkbox" name="red-mountain" checked>
+                        <label class="feedback__label feedback__label--mountain" for="feedback__mountain">Гора-Колокол</label>
+                    </div>
+                    <div class="feedback__slide-park">
+                        <input class="feedback__checkbox feedback__checkbox--checked" id="feedback__slide-park" type="checkbox" name="slide-park" checked>
+                        <label class="feedback__label feedback__label--slide-park" for="feedback__slide-park">Слайд-парк</label>
+                    </div>
+                    <div class="feedback__red-rocks">
+                        <input class="feedback__checkbox" id="feedback__red-rocks" type="checkbox" name="red-rocks">
+                        <label class="feedback__label feedback__label--red-rocks" for="feedback__red-rocks">Красные скалы</label>
+                    </div>
+                </section>
+                <section class="feedback__emotions">
+                    <b class="feedback__emotions">Опишите свои эмоции:</b><br>
+                    <textarea class="feedback__textreview" placeholder="Опишите подробно все свои восторги"></textarea>
+                </section>
+                <button class="feedback__send" type="submit">Отправить отзыв</button>
+            </form>
+        </main>
+        <footer class="page-footer">
+            <h1 class="page-footer__title">#Visitsedona</h1>
+            <ul class="social">
+                <li class="social__item">
+                    <a class="social__link social__link--twitter" href="https://twitter.com/htmlacademy">Twitter</a>
+                </li>
+                <li class="social__item">
+                    <a class="social__link social__link--facebook" href="https://facebook.com/htmlacademy">Facebook</a>
+                </li>
+                <li class="social__item">
+                    <a class="social__link social__link--vk" href="https://vk.com/htmlacademy">VK</a>
+                </li>
+            </ul>
+            <div class="copyright">
+                <a class="copyright_link" href="https://htmlacademy.ru">Разработано</a>
+                <img class="copyright__icon" src="htmlacademy.png" width="27" height="34" alt="HTML Academy">
+            </div>
+        </footer>
+        <!-- всплывающие окна в случае корректного и некорректного ввода данных -->
+        <div class="popup popup--failure" style="display: none;">
+            <b class="popup__title popup__title-failure">Что-то пошло не так!</b>
+            <p class="popup__desc popup__desc--failure">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
+            <button class="popup__close popup__close--failure" type="button">OK</button>
+        </div>
+        <div class="popup popup--success" style="display: none;">
+            <b class="popup__title popup__title-success">Ваш отзыв отправлен!</b>
+            <p class="popup__desc popup__desc--success">Спасибо за ваше участие, ваш отзыв уже поступил к нам.
+                В ближайшее время мы опубликуем его на сайте.</p>
+            <button class="popup__close popup__close--success" type="button">Закрыть окно</button>
+        </div>
+    </body>
+</html>
