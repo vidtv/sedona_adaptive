@@ -4,6 +4,7 @@
         <meta charset="utf-8">
         <title>Make a feedback</title>
         <link href="css/style.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=PT+Sans:700" rel="stylesheet">
     </head>
     <body>
         <header class="page-header">
@@ -32,11 +33,11 @@
         </header>
         <main class="page-main">
             <header class="feedback-preview">
-                <b class="feedback-preview__title">Оставьте свой отзыв</b>
-                <p class="feedback__desc">Помогите нашим отелям стать лучше! оставьте отзыв о них,
+                <b class="feedback__title feedback-preview__title">Оставьте свой отзыв</b>
+                <p class="feedback-preview__asking">Помогите нашим отелям стать лучше! оставьте отзыв о них,
                     а также о посещенных вами достопримечательностях</p>
             </header>
-            <form class="feedback-form" action="https://echo.htmlacademy.ru">
+            <form class="feedback" action="https://echo.htmlacademy.ru">
                 <section class="feedback__author">
                     <b class="feedback__title">Представьтесь</b>
                     <div class="feedback__name">
@@ -49,7 +50,8 @@
                     </div>
                     <div class="feedback__patronymic">
                         <label class="feedback__label feedback__label--patronymic" for="feedback__label--patronymic">Отчество:</label>
-                        <input class="feedback__input feedback__input--name" id="feedback__label--patronymic" type="text" value="Александрович">
+                        <input class="feedback__input feedback__input--patronymic" id="feedback__label--patronymic"
+                               type="text" value="Александрович">
                     </div>
                 </section>
                 <section class="feedback__contacts">

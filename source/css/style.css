@@ -1,2 +1,7 @@
+.copyright {
+  background: green;
+}
+
 body {
-  background: red; }
+  font-family: 'PT Sans', sans-serif;
+}
