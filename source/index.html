@@ -5,6 +5,7 @@
         <title>Sedona</title>
         <link href="css/style.css" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=PT+Sans:700" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
     </head>
     <body>
         <header class="page-header">
@@ -12,20 +13,20 @@
                 <img class="page-header__logo-image" src="main.svg" width="102" height="83" alt="Sedona">
             </a>
             <nav class="main-nav">
-                <button class="main-nav__open" type="button">Open</button>
+                <button class="main-nav__open" type="button"></button>
                 <div class="main-nav__wrapper">
                     <ul class="main-nav__list site-list">
                         <li class="site-list__item site-list__item--active">
-                            <a>Главная</a>
+                            <a class="site-list__link">Главная</a>
                         </li>
                         <li class="site-list__item">
-                            <a href="photo.html">Фото и видео</a>
+                            <a class="site-list__link" href="photo.html">Фото и видео</a>
                         </li>
                         <li class="site-list__item">
-                            <a href="form.html">Форма отзыва</a>
+                            <a class="site-list__link" href="form.html">Форма отзыва</a>
                         </li>
                         <li class="site-list__item">
-                            <a href="https://htmlacademy.ru">HTML Academy</a>
+                            <a class="site-list__link" href="https://htmlacademy.ru">HTML Academy</a>
                         </li>
                     </ul>
                 </div>
@@ -39,49 +40,50 @@
             </header>
             <section class="reason reason--first">
                 <b class="features__title reason__title reason__title--first">Настоящий городок</b>
-                <div class="reason-first__number">- №1 -</div>
-                <p class="reason-first__desc">Седона не аттракцион для туристов, там течёт своя жизнь</p>
+                <div class="reason__number reason-first__number">- №1 -</div>
+                <p class="reason__desc reason-first__desc">Седона не аттракцион для туристов, там течёт своя жизнь</p>
                 <img src="reason1.jpg" width="320" height="260" alt="Настоящий городок">
             </section>
             <section class="features">
                 <article class="features__item">
                     <b class="features__title">Жильё</b>
-                    <p class="features_desc">Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
+                    <p class="features__desc">Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
                 </article>
                 <article class="features__item">
                     <b class="features__title">Сувениры</b>
-                    <p class="features_desc">Не только китайского, но и местного производства!</p>
+                    <p class="features__desc">Не только китайского, но и местного производства!</p>
                 </article>
                 <article class="features__item">
                     <b class="features__title">Еда</b>
-                    <p class="features_desc">Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
+                    <p class="features__desc">Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
                 </article>
             </section>
             <section class="reason reason--second">
                 <b class="features__title reason__title reason__title--second">Там есть мост дьявола</b>
-                <div class="reason-second__number">- №2 -</div>
-                <p class="reason-second__desc">Да, по нему можно пройти! Если вы осмелитесь, конечно</p>
+                <div class="reason__number reason-second__number">- №2 -</div>
+                <p class="reason__desc reason-second__desc">Да, по нему можно пройти! Если вы осмелитесь, конечно</p>
                 <img src="reason2.jpg" width="320" height="260" alt="Там есть мост дьявола">
             </section>
             <section class="reason reason--third">
                 <b class="features__title reason__title reason__title--third">Небольшая площадь</b>
-                <div class="reason-third__number">- №3 -</div>
-                <p class="reason-third__desc">Все интересные места находятся очень близко</p>
+                <div class="reason__number reason-third__number">- №3 -</div>
+                <p class="reason__desc reason-third__desc">Все интересные места находятся очень близко</p>
             </section>
             <section class="reason reason--fourth">
                 <b class="features__title reason__title reason__title--fourth">Красивая дорога</b>
-                <div class="reason-fourth__number">- №4 -</div>
-                <p class="reason-fourth__desc">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
+                <div class="reason__number reason-fourth__number">- №4 -</div>
+                <p class="reason__desc reason-fourth__desc">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
             </section>
             <section class="reason reason--fifth">
                 <b class="features__title reason__title reason__title--fifth">Мало туристов</b>
-                <div class="reason-fifth__number">- №5 -</div>
-                <p class="reason-fifth__desc">Большинство едет в Гранд-Каньон и толпится там</p>
+                <div class="reason__number reason-fifth__number">- №5 -</div>
+                <p class="reason__desc reason-fifth__desc">Большинство едет в Гранд-Каньон и толпится там</p>
             </section>
             <section class="hotel-search">
                 <h1 class="features__title hotel-search__title">Заинтересовались?</h1>
-                <p>Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
-                <a class="button search__button">Найти гостиницу</a>
+                <p class="features__desc hotel-search__desc">Укажите предполагаемые даты поездки, и мы покажем вам
+                    лучшие предложения гостиниц в Седоне</p>
+                <a class="button hotel-search__button">Найти гостиницу</a>
             </section>
             <map class="sedona-map" id="#sedona-map"></map>
         </main>

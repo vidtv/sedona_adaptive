@@ -1,0 +1,16 @@
+@import "../variables";
+@import "button";
+
+.hotel-search {
+  text-align: center;
+
+  .hotel-search__title {
+    line-height: 26px;
+    @media (min-width: $tablet) {
+      font-size: 30px;
+    }
+    @media (min-width: $mobile) {
+      font-size: 21px;
+    }
+  }
+}

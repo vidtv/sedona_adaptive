@@ -15,8 +15,11 @@
 "blocks/sedona-preview",
 "blocks/site-list",
 "blocks/social",
-"blocks/video";
+"blocks/video",
+"variables";
 
 body {
   font-family: 'PT Sans', sans-serif;
+  font-weight: $bold;
+  text-transform: uppercase;
 }

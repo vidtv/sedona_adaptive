@@ -1,3 +1,9 @@
-.copyright {
-  background: green;
+@import "../variables";
+
+.copyright__link {
+  font-weight: $regular;
+  font-size: 14px;
+  line-height: 26px;
+  color: black;
+  text-decoration: none;
 }

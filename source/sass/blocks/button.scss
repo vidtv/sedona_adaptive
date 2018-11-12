@@ -1,0 +1,10 @@
+@import "../variables";
+
+.button {
+  background: $light-blue;
+  color: white;
+  font-size: 21px;
+  line-height: 26px;
+
+  cursor: pointer;
+}
