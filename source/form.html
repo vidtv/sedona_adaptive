@@ -5,6 +5,7 @@
         <title>Make a feedback</title>
         <link href="css/style.css" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=PT+Sans:700" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
     </head>
     <body>
         <header class="page-header">
@@ -16,16 +17,16 @@
                 <div class="main-nav__wrapper">
                     <ul class="main-nav__list site-list">
                         <li class="site-list__item site-list__item--active">
-                            <a href="index.html">Главная</a>
+                            <a class="site-list__link" href="index.html">Главная</a>
                         </li>
                         <li class="site-list__item">
-                            <a href="photo.html">Фото и видео</a>
+                            <a class="site-list__link" href="photo.html">Фото и видео</a>
                         </li>
                         <li class="site-list__item">
-                            <a>Форма отзыва</a>
+                            <a class="site-list__link">Форма отзыва</a>
                         </li>
                         <li class="site-list__item">
-                            <a href="https://htmlacademy.ru">HTML Academy</a>
+                            <a class="site-list__link" href="https://htmlacademy.ru">HTML Academy</a>
                         </li>
                     </ul>
                 </div>
@@ -42,15 +43,18 @@
                     <b class="feedback__title">Представьтесь</b>
                     <div class="feedback__name">
                         <label class="feedback__label feedback__label--name" for="feedback__input--name">Имя:*</label>
-                        <input class="feedback__input feedback__input--name" id="feedback__input--name" type="text" value="Петр">
+                        <input class="feedback__input feedback__input--text feedback__input--name"
+                               id="feedback__input--name" type="text" value="Петр">
                     </div>
                     <div class="feedback__surname">
                         <label class="feedback__label feedback__label--surname" for="feedback__label--surname">Фамилия:*</label>
-                        <input class="feedback__input feedback__input--surname" id="feedback__label--surname" type="text" value="Иванов">
+                        <input class="feedback__input feedback__input--text feedback__input--surname"
+                               id="feedback__label--surname" type="text" value="Иванов">
                     </div>
                     <div class="feedback__patronymic">
                         <label class="feedback__label feedback__label--patronymic" for="feedback__label--patronymic">Отчество:</label>
-                        <input class="feedback__input feedback__input--patronymic" id="feedback__label--patronymic"
+                        <input class="feedback__input feedback__input--text feedback__input--patronymic"
+                               id="feedback__label--patronymic"
                                type="text" value="Александрович">
                     </div>
                 </section>
@@ -58,11 +62,13 @@
                     <b class="feedback__title">Контактная информация:</b>
                     <div class="feedback__phone">
                         <label class="feedback__label feedback__label--phone" for="feedback__input--phone">Контактный телефон*:</label>
-                        <input class="feedback__input feedback__input--phone" id="feedback__input--phone" type="text" placeholder="Введите телефон">
+                        <input class="feedback__input feedback__input--text feedback__input--phone"
+                               id="feedback__input--phone" type="text" placeholder="Введите телефон">
                     </div>
                     <div class="feedback__email">
                         <label class="feedback__label feedback__label--email" for="feedback__input--email">Контактный телефон*:</label>
-                        <input class="feedback__input feedback__input--email" id="feedback__input--email" type="text" placeholder="Введите e-mail">
+                        <input class="feedback__input feedback__input--text feedback__input--email"
+                               id="feedback__input--email" type="text" placeholder="Введите e-mail">
                     </div>
                 </section>
                 <section class="feedback__impression">
@@ -70,15 +76,18 @@
                     <div class="feedback__positive">
                         <input class="feedback__radio feedback__radio--checked feedback__input--checked" id="feedback__radio--positive"
                                type="radio" name="impression" checked>
-                        <label class="feedback__label feedback__label--positive" for="feedback__radio--positive">Скорее положительное</label>
+                        <label class="feedback__label feedback__label--radio feedback__label--positive"
+                               for="feedback__radio--positive">Скорее положительное</label>
                     </div>
                     <div class="feedback__negative">
                         <input class="feedback__radio feedback__radio" id="feedback__radio--negative" type="radio" name="impression">
-                        <label class="feedback__label feedback__label--negative" for="feedback__radio--negative">Скорее негативное</label>
+                        <label class="feedback__label feedback__label--radio feedback__label--negative"
+                               for="feedback__radio--negative">Скорее негативное</label>
                     </div>
                     <div class="feedback__dunno">
                         <input class="feedback__radio feedback__radio--dunno" id="feedback__radio--dunno" type="radio" name="impression">
-                        <label class="feedback__label feedback__label--dunno" for="feedback__radio--dunno">Скорее негативное</label>
+                        <label class="feedback__label feedback__label--radio feedback__label--dunno"
+                               for="feedback__radio--dunno">Скорее негативное</label>
                     </div>
                 </section>
                 <section class="feedback__sights">
@@ -86,26 +95,30 @@
                     <div class="feedback__devil-bridge">
                         <input class="feedback__checkbox feedback__checkbox--checked" id="feedback__devil-bridge"
                                type="checkbox" name="devil-bridge" checked>
-                        <label class="feedback__label feedback__label--devil-bridge" for="feedback__devil-bridge">Мост Дьявола</label>
+                        <label class="feedback__label feedback__label--checkbox feedback__label--devil-bridge"
+                               for="feedback__devil-bridge">Мост Дьявола</label>
                     </div>
                     <div class="feedback__mountain">
                         <input class="feedback__checkbox feedback__checkbox--checked" id="feedback__mountain" type="checkbox" name="red-mountain" checked>
-                        <label class="feedback__label feedback__label--mountain" for="feedback__mountain">Гора-Колокол</label>
+                        <label class="feedback__label feedback__label--checkbox feedback__label--mountain"
+                               for="feedback__mountain">Гора-Колокол</label>
                     </div>
                     <div class="feedback__slide-park">
                         <input class="feedback__checkbox feedback__checkbox--checked" id="feedback__slide-park" type="checkbox" name="slide-park" checked>
-                        <label class="feedback__label feedback__label--slide-park" for="feedback__slide-park">Слайд-парк</label>
+                        <label class="feedback__label feedback__label--checkbox feedback__label--slide-park"
+                               for="feedback__slide-park">Слайд-парк</label>
                     </div>
                     <div class="feedback__red-rocks">
                         <input class="feedback__checkbox" id="feedback__red-rocks" type="checkbox" name="red-rocks">
-                        <label class="feedback__label feedback__label--red-rocks" for="feedback__red-rocks">Красные скалы</label>
+                        <label class="feedback__label feedback__label--checkbox feedback__label--red-rocks"
+                               for="feedback__red-rocks">Красные скалы</label>
                     </div>
                 </section>
                 <section class="feedback__emotions">
-                    <b class="feedback__emotions">Опишите свои эмоции:</b><br>
+                    <b class="feedback__title">Опишите свои эмоции:</b><br>
                     <textarea class="feedback__textreview" placeholder="Опишите подробно все свои восторги"></textarea>
                 </section>
-                <button class="feedback__send" type="submit">Отправить отзыв</button>
+                <button class="button feedback__send" type="submit">Отправить отзыв</button>
                 <span class="feedback__note">* - обязательные поля</span>
             </form>
         </main>
@@ -131,13 +144,13 @@
         <div class="popup popup--failure" style="display: none;">
             <b class="popup__title popup__title-failure">Что-то пошло не так!</b>
             <p class="popup__desc popup__desc--failure">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
-            <button class="popup__close popup__close--failure" type="button">OK</button>
+            <button class="button popup__close popup__close--failure" type="button">OK</button>
         </div>
         <div class="popup popup--success" style="display: none;">
             <b class="popup__title popup__title-success">Ваш отзыв отправлен!</b>
             <p class="popup__desc popup__desc--success">Спасибо за ваше участие, ваш отзыв уже поступил к нам.
                 В ближайшее время мы опубликуем его на сайте.</p>
-            <button class="popup__close popup__close--success" type="button">Закрыть окно</button>
+            <button class="button popup__close popup__close--success" type="button">Закрыть окно</button>
         </div>
     </body>
 </html>

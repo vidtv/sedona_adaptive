@@ -2,23 +2,22 @@
 
 .site-list__item {
   list-style-type: none;
+  @media (min-width: $mobile) {
+    background: $light-blue;
+  }
   @media (min-width: $tablet) {
     font-size: 14px;
     line-height: 26px;
     background: white;
   }
-  @media (min-width: $mobile) and (max-width: ($tablet)-1) {
-    background: #81b3d2;
-  }
 
   .site-list__link {
     text-decoration: none;
-    text-transform: uppercase;
-    @media (min-width: $tablet) {
-      color: #000;
-    }
     @media (min-width: $mobile) {
-      color: #FFFFFF;
+      color: white;
+    }
+    @media (min-width: $tablet) {
+      color: black;
     }
   }
 }

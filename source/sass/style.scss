@@ -1,4 +1,6 @@
-@import "blocks/features",
+@import "variables",
+"blocks/button",
+"blocks/features",
 "blocks/feedback",
 "blocks/feedback-preview",
 "blocks/hotel-search",
@@ -15,8 +17,7 @@
 "blocks/sedona-preview",
 "blocks/site-list",
 "blocks/social",
-"blocks/video",
-"variables";
+"blocks/video";
 
 body {
   font-family: 'PT Sans', sans-serif;
