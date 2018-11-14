@@ -138,9 +138,66 @@
   color: black;
   text-decoration: none; }
 
+/* основной цвет сайта */
+.likes .likes__number {
+  background: none; }
+  @media (min-width: 320px) {
+    .likes .likes__number {
+      color: black; } }
+  @media (min-width: 1200px) {
+    .likes .likes__number {
+      color: white; } }
+
 .page-footer__title {
   font-size: 21px;
   line-height: 26px; }
+
+/* основной цвет сайта */
+.photos .photos__preview {
+  text-align: center; }
+  .photos .photos__preview .photos__title--preview {
+    line-height: 26px; }
+    @media (min-width: 320px) {
+      .photos .photos__preview .photos__title--preview {
+        font-size: 18px; } }
+    @media (min-width: 768px) {
+      .photos .photos__preview .photos__title--preview {
+        font-size: 30px; } }
+
+.photos .photos__desc {
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 400;
+  color: #333333; }
+
+.photos .photos__gallery .photos__item .photos__title, .photos .photos__gallery .photos__item .likes .likes__number, .likes .photos .photos__gallery .photos__item .likes__number {
+  font-size: 14px;
+  line-height: 24px; }
+
+@media (min-width: 320px) {
+  .photos .photos__gallery .photos__info {
+    color: black; } }
+
+@media (min-width: 768px) {
+  .photos .photos__gallery .photos__info {
+    background: #f2f2f2; } }
+
+@media (min-width: 1200px) {
+  .photos .photos__gallery .photos__info {
+    color: white;
+    background: rgba(0, 0, 0, 0.3); } }
+
+.photos .photos__gallery .photos__info .photos__author {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  text-transform: none; }
+  @media (min-width: 320px) {
+    .photos .photos__gallery .photos__info .photos__author {
+      color: #333333; } }
+  @media (min-width: 1200px) {
+    .photos .photos__gallery .photos__info .photos__author {
+      color: white; } }
 
 /* основной цвет сайта */
 @media (min-width: 320px) {
@@ -239,6 +296,23 @@
 .social__item {
   background: #81b3d2;
   list-style-type: none; }
+
+/* основной цвет сайта */
+.video {
+  text-align: center; }
+  .video .video__title {
+    line-height: 26px; }
+    @media (min-width: 320px) {
+      .video .video__title {
+        font-size: 18px; } }
+    @media (min-width: 768px) {
+      .video .video__title {
+        font-size: 30px; } }
+  .video .video__controls {
+    background: rgba(0, 0, 0, 0.6); }
+    @media (max-width: 767px) {
+      .video .video__controls .video__buttons {
+        background: #f2f2f2; } }
 
 body, .feedback .feedback__input--text,
 .feedback .feedback__textreview, .feedback button, .popup button {

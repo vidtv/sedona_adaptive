@@ -1,0 +1,58 @@
+@import "../variables";
+
+.photos {
+  .photos__preview {
+    text-align: center;
+    .photos__title--preview {
+      line-height: 26px;
+      @media (min-width: $mobile) {
+        font-size: 18px;
+      }
+      @media (min-width: $tablet) {
+        font-size: 30px;
+      }
+    }
+  }
+
+  .photos__desc {
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: $regular;
+    color: rgb(51, 51, 51);
+  }
+
+  .photos__gallery {
+    .photos__item {
+      .photos__title {
+        font-size: 14px;
+        line-height: 24px;
+      }
+    }
+
+    .photos__info {
+      @media (min-width: $mobile) {
+        color: black;
+      }
+      @media (min-width: $tablet) {
+        background: rgb(242, 242, 242);
+      }
+      @media (min-width: $desktop) {
+        color: white;
+        background: rgba(0, 0, 0, 0.3);
+      }
+
+      .photos__author {
+        font-size: 14px;
+        font-weight: $regular;
+        line-height: 24px;
+        text-transform: none;
+        @media (min-width: $mobile) {
+          color: rgb(51, 51, 51);
+        }
+        @media (min-width: $desktop) {
+          color: white;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,14 @@
+@import "../variables";
+
+.likes {
+  .likes__number {
+    @extend .photos__title;
+    background: none;
+    @media (min-width: $mobile) {
+      color: black;
+    }
+    @media (min-width: $desktop) {
+      color: white;
+    }
+  }
+}
