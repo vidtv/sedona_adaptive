@@ -1,23 +1,49 @@
 @import "../variables";
 
-.site-list__item {
-  list-style-type: none;
-  @media (min-width: $mobile) {
-    background: $light-blue;
-  }
-  @media (min-width: $tablet) {
-    font-size: 14px;
-    line-height: 26px;
-    background: white;
-  }
-
-  .site-list__link {
-    text-decoration: none;
+.site-list {
+  .site-list__item {
+    list-style-type: none;
+    text-align: center;
     @media (min-width: $mobile) {
-      color: white;
+      display: block;
+      background: $light-blue;
+      width: 100%;
+      padding: 8px 0;
     }
     @media (min-width: $tablet) {
-      color: black;
+      background: white;
+      padding: 15px 0;
+    }
+
+    .site-list__link {
+      text-decoration: none;
+      @media (min-width: $mobile) {
+        color: white;
+        font-size: 18px;
+        line-height: 40px;
+      }
+      @media (min-width: $tablet) {
+        color: black;
+        font-size: 14px;
+        line-height: 26px;
+      }
+    }
+
+    .site-list__close {
+      position: absolute;
+      top: 17px;
+      right: 20px;
+      width: 23px;
+      height: 22px;
+      @media (min-width: $tablet) {
+        display: none;
+      }
+    }
+  }
+
+  .site-list__item:nth-of-type(2) {
+    @media (min-width: $tablet) {
+      margin-right: 102px;
     }
   }
 }

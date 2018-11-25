@@ -148,9 +148,72 @@
     .likes .likes__number {
       color: white; } }
 
+/* основной цвет сайта */
+@media (min-width: 768px) {
+    .main-nav {
+        height: 100%;
+    }
+}
+
+.main-nav .main-nav__list {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0;
+}
+
+@media (min-width: 768px) {
+    .main-nav .main-nav__list {
+        flex-wrap: nowrap;
+        height: 100%;
+    }
+}
+
+.main-nav__open {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    width: 23px;
+    height: 21px;
+}
+
+@media (min-width: 768px) {
+    .main-nav__open {
+        display: none;
+    }
+}
+
 .page-footer__title {
   font-size: 21px;
   line-height: 26px; }
+
+/* основной цвет сайта */
+.page-header {
+    position: relative;
+}
+
+@media (min-width: 320px) {
+    .page-header {
+        height: 280px;
+    }
+}
+
+@media (min-width: 768px) {
+    .page-header {
+        height: 56px;
+    }
+}
+
+.page-header .page-header__logo {
+    position: absolute;
+    left: calc(50% - 51px);
+}
+
+@media (min-width: 768px) {
+    .page-header .page-header__logo {
+        top: 0;
+    }
+}
 
 /* основной цвет сайта */
 .photos .photos__preview {
@@ -269,28 +332,66 @@
 .sedona-preview__reasons {
   font-family: 'PT Sans', sans-serif;
   font-size: 14px;
+    font-weight: 400;
   line-height: 26px;
   color: #333333; }
 
 /* основной цвет сайта */
-.site-list__item {
-  list-style-type: none; }
+.site-list .site-list__item {
+    list-style-type: none;
+    text-align: center;
+}
   @media (min-width: 320px) {
-    .site-list__item {
-      background: #81b3d2; } }
+      .site-list .site-list__item {
+          display: block;
+          background: #81b3d2;
+          width: 100%;
+          padding: 8px 0;
+      }
+  }
   @media (min-width: 768px) {
-    .site-list__item {
-      font-size: 14px;
-      line-height: 26px;
-      background: white; } }
-  .site-list__item .site-list__link {
+      .site-list .site-list__item {
+          background: white;
+          padding: 15px 0;
+      }
+  }
+
+.site-list .site-list__item .site-list__link {
     text-decoration: none; }
     @media (min-width: 320px) {
-      .site-list__item .site-list__link {
-        color: white; } }
+        .site-list .site-list__item .site-list__link {
+            color: white;
+            font-size: 18px;
+            line-height: 40px;
+        }
+    }
     @media (min-width: 768px) {
-      .site-list__item .site-list__link {
-        color: black; } }
+        .site-list .site-list__item .site-list__link {
+            color: black;
+            font-size: 14px;
+            line-height: 26px;
+        }
+    }
+
+.site-list .site-list__item .site-list__close {
+    position: absolute;
+    top: 17px;
+    right: 20px;
+    width: 23px;
+    height: 22px;
+}
+
+@media (min-width: 768px) {
+    .site-list .site-list__item .site-list__close {
+        display: none;
+    }
+}
+
+@media (min-width: 768px) {
+    .site-list .site-list__item:nth-of-type(2) {
+        margin-right: 102px;
+    }
+}
 
 /* основной цвет сайта */
 .social__item {
@@ -318,4 +419,28 @@ body, .feedback .feedback__input--text,
 .feedback .feedback__textreview, .feedback button, .popup button {
   font-family: 'PT Sans', sans-serif;
   font-weight: 700;
-  text-transform: uppercase; }
+    text-transform: uppercase;
+    min-width: 320px;
+    width: 100%;
+    margin: 0;
+}
+
+body .container, .feedback .feedback__input--text .container, .feedback .feedback__textreview .container, .feedback button .container, .popup button .container {
+    width: 280px;
+    padding: 0 20px;
+    margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+    body .container, .feedback .feedback__input--text .container, .feedback .feedback__textreview .container, .feedback button .container, .popup button .container {
+        width: 648px;
+        padding: 0 60px;
+    }
+}
+
+@media (min-width: 1200px) {
+    body .container, .feedback .feedback__input--text .container, .feedback .feedback__textreview .container, .feedback button .container, .popup button .container {
+        width: 1200px;
+        padding: 0;
+    }
+}
