@@ -39,10 +39,13 @@
                 <p class="sedona-preview__reasons">Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
             </header>
             <section class="reason reason--first">
-                <b class="features__title reason__title reason__title--first">Настоящий городок</b>
-                <div class="reason__number reason-first__number">- №1 -</div>
-                <p class="reason__desc reason-first__desc">Седона не аттракцион для туристов, там течёт своя жизнь</p>
-                <img src="reason1.jpg" width="320" height="260" alt="Настоящий городок">
+                <div class="reason__wrapper">
+                    <b class="reason__title reason__title--first">Настоящий городок</b>
+                    <div class="reason__number reason-first__number">- №1 -</div>
+                    <p class="reason__desc reason-first__desc">Седона не аттракцион для туристов, там течёт своя
+                        жизнь</p>
+                </div>
+                <div class="reason__image"></div>
             </section>
             <section class="features">
                 <article class="features__item">
@@ -50,38 +53,43 @@
                     <p class="features__desc">Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
                 </article>
                 <article class="features__item">
-                    <b class="features__title">Сувениры</b>
-                    <p class="features__desc">Не только китайского, но и местного производства!</p>
-                </article>
-                <article class="features__item">
                     <b class="features__title">Еда</b>
                     <p class="features__desc">Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
                 </article>
+                <article class="features__item">
+                    <b class="features__title">Сувениры</b>
+                    <p class="features__desc">Не только китайского, но и местного производства!</p>
+                </article>
             </section>
             <section class="reason reason--second">
-                <b class="features__title reason__title reason__title--second">Там есть мост дьявола</b>
-                <div class="reason__number reason-second__number">- №2 -</div>
-                <p class="reason__desc reason-second__desc">Да, по нему можно пройти! Если вы осмелитесь, конечно</p>
-                <img src="reason2.jpg" width="320" height="260" alt="Там есть мост дьявола">
+                <div class="reason__wrapper">
+                    <b class="reason__title reason__title--second">Там есть мост дьявола</b>
+                    <div class="reason__number reason-second__number">- №2 -</div>
+                    <p class="reason__desc reason-second__desc">Да, по нему можно пройти! Если вы осмелитесь,
+                        конечно</p>
+                </div>
+                <div class="reason__image"></div>
             </section>
-            <section class="reason reason--third">
-                <b class="features__title reason__title reason__title--third">Небольшая площадь</b>
-                <div class="reason__number reason-third__number">- №3 -</div>
-                <p class="reason__desc reason-third__desc">Все интересные места находятся очень близко</p>
-            </section>
-            <section class="reason reason--fourth">
-                <b class="features__title reason__title reason__title--fourth">Красивая дорога</b>
-                <div class="reason__number reason-fourth__number">- №4 -</div>
-                <p class="reason__desc reason-fourth__desc">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
-            </section>
-            <section class="reason reason--fifth">
-                <b class="features__title reason__title reason__title--fifth">Мало туристов</b>
-                <div class="reason__number reason-fifth__number">- №5 -</div>
-                <p class="reason__desc reason-fifth__desc">Большинство едет в Гранд-Каньон и толпится там</p>
+            <section class="reason__minor">
+                <section class="reason reason--third">
+                    <b class="reason__title reason__title--third">Небольшая площадь</b>
+                    <div class="reason__number reason-third__number">- №3 -</div>
+                    <p class="reason__desc reason-third__desc">Все интересные места находятся очень близко</p>
+                </section>
+                <section class="reason reason--fourth">
+                    <b class="reason__title reason__title--fourth">Красивая дорога</b>
+                    <div class="reason__number reason-fourth__number">- №4 -</div>
+                    <p class="reason__desc reason-fourth__desc">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
+                </section>
+                <section class="reason reason--fifth">
+                    <b class="reason__title reason__title--fifth">Мало туристов</b>
+                    <div class="reason__number reason-fifth__number">- №5 -</div>
+                    <p class="reason__desc reason-fifth__desc">Большинство едет в Гранд Каньон и толпится там</p>
+                </section>
             </section>
             <section class="hotel-search">
-                <h1 class="features__title hotel-search__title">Заинтересовались?</h1>
-                <p class="features__desc hotel-search__desc">Укажите предполагаемые даты поездки, и мы покажем вам
+                <h1 class="hotel-search__title">Заинтересовались?</h1>
+                <p class="hotel-search__desc">Укажите предполагаемые даты поездки, <br>и мы покажем вам
                     лучшие предложения гостиниц в Седоне</p>
                 <a class="button hotel-search__button">Найти гостиницу</a>
             </section>
@@ -91,18 +99,19 @@
             <b class="page-footer__title">#Visitsedona</b>
             <ul class="social">
                 <li class="social__item">
-                    <a class="social__link social__link--twitter" href="https://twitter.com/htmlacademy">Twitter</a>
+                    <a class="social__link social__link--twitter" href="https://twitter.com/htmlacademy"></a>
                 </li>
                 <li class="social__item">
-                    <a class="social__link social__link--facebook" href="https://facebook.com/htmlacademy">Facebook</a>
+                    <a class="social__link social__link--facebook" href="https://facebook.com/htmlacademy"></a>
                 </li>
                 <li class="social__item">
-                    <a class="social__link social__link--vk" href="https://vk.com/htmlacademy">VK</a>
+                    <a class="social__link social__link--vk" href="https://vk.com/htmlacademy"></a>
                 </li>
             </ul>
             <div class="copyright">
-                <a class="copyright__link" href="https://htmlacademy.ru">Разработано</a>
-                <img class="copyright__icon" src="htmlacademy.png" width="27" height="34" alt="HTML Academy">
+                <div class="copyright__wrapper">
+                    <a class="copyright__link" href="https://htmlacademy.ru">Разработано</a>
+                </div>
             </div>
         </footer>
     </body>
