@@ -2,6 +2,7 @@
 <html>
     <head>
         <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width; initial-scale=1.0">
         <title>Make a feedback</title>
         <link href="css/style.css" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=PT+Sans:700" rel="stylesheet">
@@ -9,28 +10,27 @@
     </head>
     <body>
         <header class="page-header">
-            <a class="page-header__logo" href="index.html">
+            <nav class="main-nav">
+                <ul class="main-nav__list site-list">
+                    <li class="site-list__item site-list__item--active">
+                        <a class="site-list__link" href="index.html">Главная</a>
+                        <button class="site-list__close"></button>
+                    </li>
+                    <li class="site-list__item">
+                        <a class="site-list__link" href="photo.html">Фото и видео</a>
+                    </li>
+                    <li class="site-list__item">
+                        <a class="site-list__link">Форма отзыва</a>
+                    </li>
+                    <li class="site-list__item">
+                        <a class="site-list__link" href="https://htmlacademy.ru">HTML Academy</a>
+                    </li>
+                </ul>
+            </nav>
+            <a class="page-header__logo">
                 <img class="page-header__logo-image" src="main.svg" width="102" height="83" alt="Sedona">
             </a>
-            <nav class="main-nav">
-                <button class="main-nav__open" type="button">Open</button>
-                <div class="main-nav__wrapper">
-                    <ul class="main-nav__list site-list">
-                        <li class="site-list__item site-list__item--active">
-                            <a class="site-list__link" href="index.html">Главная</a>
-                        </li>
-                        <li class="site-list__item">
-                            <a class="site-list__link" href="photo.html">Фото и видео</a>
-                        </li>
-                        <li class="site-list__item">
-                            <a class="site-list__link">Форма отзыва</a>
-                        </li>
-                        <li class="site-list__item">
-                            <a class="site-list__link" href="https://htmlacademy.ru">HTML Academy</a>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
+            <button class="main-nav__open"></button>
         </header>
         <main class="page-main">
             <header class="feedback-preview">
@@ -42,20 +42,20 @@
                 <section class="feedback__author">
                     <b class="feedback__title">Представьтесь</b>
                     <div class="feedback__name">
-                        <label class="feedback__label feedback__label--name" for="feedback__input--name">Имя:*</label>
+                        <label class="feedback__label feedback__label--name" for="feedback__input--name">Имя*:</label>
                         <input class="feedback__input feedback__input--text feedback__input--name"
                                id="feedback__input--name" type="text" value="Петр">
                     </div>
                     <div class="feedback__surname">
-                        <label class="feedback__label feedback__label--surname" for="feedback__label--surname">Фамилия:*</label>
+                        <label class="feedback__label feedback__label--surname"
+                               for="feedback__input--surname">Фамилия*:</label>
                         <input class="feedback__input feedback__input--text feedback__input--surname"
-                               id="feedback__label--surname" type="text" value="Иванов">
+                               id="feedback__input--surname" type="text" value="Иванов">
                     </div>
                     <div class="feedback__patronymic">
-                        <label class="feedback__label feedback__label--patronymic" for="feedback__label--patronymic">Отчество:</label>
+                        <label class="feedback__label feedback__label--patronymic" for="feedback__input--patronymic">Отчество:</label>
                         <input class="feedback__input feedback__input--text feedback__input--patronymic"
-                               id="feedback__label--patronymic"
-                               type="text" value="Александрович">
+                               id="feedback__input--patronymic" type="text" value="Александрович">
                     </div>
                 </section>
                 <section class="feedback__contacts">
@@ -66,7 +66,8 @@
                                id="feedback__input--phone" type="text" placeholder="Введите телефон">
                     </div>
                     <div class="feedback__email">
-                        <label class="feedback__label feedback__label--email" for="feedback__input--email">Контактный телефон*:</label>
+                        <label class="feedback__label feedback__label--email" for="feedback__input--email">Электронная
+                            почта*:</label>
                         <input class="feedback__input feedback__input--text feedback__input--email"
                                id="feedback__input--email" type="text" placeholder="Введите e-mail">
                     </div>
@@ -115,29 +116,35 @@
                     </div>
                 </section>
                 <section class="feedback__emotions">
-                    <b class="feedback__title">Опишите свои эмоции:</b><br>
-                    <textarea class="feedback__textreview" placeholder="Опишите подробно все свои восторги"></textarea>
+                    <b class="feedback__title">Опишите свои эмоции:</b>
+                    <div class="feedback__textreview--container">
+                        <textarea class="feedback__textreview" rows="5"
+                                  placeholder="Опишите подробно все свои восторги"></textarea>
+                    </div>
                 </section>
-                <button class="button feedback__send" type="submit">Отправить отзыв</button>
+                <div class="feedback__send--container">
+                    <button class="button feedback__send" type="submit">Отправить отзыв</button>
+                </div>
                 <span class="feedback__note">* - обязательные поля</span>
             </form>
         </main>
         <footer class="page-footer">
-            <h1 class="page-footer__title">#Visitsedona</h1>
+            <b class="page-footer__title">#Visitsedona</b>
             <ul class="social">
                 <li class="social__item">
-                    <a class="social__link social__link--twitter" href="https://twitter.com/htmlacademy">Twitter</a>
+                    <a class="social__link social__link--twitter" href="https://twitter.com/htmlacademy"></a>
                 </li>
                 <li class="social__item">
-                    <a class="social__link social__link--facebook" href="https://facebook.com/htmlacademy">Facebook</a>
+                    <a class="social__link social__link--facebook" href="https://facebook.com/htmlacademy"></a>
                 </li>
                 <li class="social__item">
-                    <a class="social__link social__link--vk" href="https://vk.com/htmlacademy">VK</a>
+                    <a class="social__link social__link--vk" href="https://vk.com/htmlacademy"></a>
                 </li>
             </ul>
             <div class="copyright">
-                <a class="copyright_link" href="https://htmlacademy.ru">Разработано</a>
-                <img class="copyright__icon" src="htmlacademy.png" width="27" height="34" alt="HTML Academy">
+                <div class="copyright__wrapper">
+                    <a class="copyright__link" href="https://htmlacademy.ru">Разработано</a>
+                </div>
             </div>
         </footer>
         <!-- всплывающие окна в случае корректного и некорректного ввода данных -->

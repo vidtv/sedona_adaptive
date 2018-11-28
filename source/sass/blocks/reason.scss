@@ -1,5 +1,6 @@
 @import "../variables",
-"features";
+"features",
+"../mixins";
 
 .reason {
   text-align: center;
@@ -96,7 +97,7 @@
     background: #eeeeee;
     padding: 30px 0;
     @media (min-width: $mobile) {
-      border-bottom: 1px solid #d6d6d6;
+      @include sedona_border();
       &:last-of-type {
         border: none;
       }

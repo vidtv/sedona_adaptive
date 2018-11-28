@@ -1,22 +1,44 @@
 @import "feedback",
-"../variables";
+"../variables",
+"../mixins";
 
 .feedback-preview {
   text-align: center;
+  @media (min-width: $mobile) {
+    padding-top: 200px;
+    padding-bottom: 30px;
+    @include sedona_border();
+  }
+  @media (min-width: $tablet) {
+    padding-top: 365px;
+    padding-bottom: 40px;
+    border-bottom: none;
+  }
+  @media (min-width: $desktop) {
+    padding-top: 415px;
+    padding-bottom: 65px;
+  }
 
   .feedback-preview__title {
+    @include sedona_title();
     @media (min-width: $mobile) {
-      font-size: 18px;
+      margin-bottom: 30px;
     }
     @media (min-width: $tablet) {
       font-size: 30px;
+      margin-bottom: 35px;
     }
   }
 
   .feedback-preview__asking {
-    color: rgb(51, 51, 51);
-    font-size: 14px;
+    @include sedona_desc();
     line-height: 24px;
-    font-weight: $regular;
+    @media (min-width: $mobile) {
+      width: 275px;
+    }
+    @media (min-width: $tablet) {
+      width: 440px;
+
+    }
   }
 }
