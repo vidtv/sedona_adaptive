@@ -6,141 +6,27 @@
   @media (min-width: $mobile) {
     padding-bottom: 38px;
   }
+  @media (min-width: $tablet) {
+    display: flex;
+    flex-wrap: wrap;
+    @include sedona_container();
+  }
+
   > section {
     @media (min-width: $mobile) and (max-width: $tablet - 1) {
       @include sedona_border();
     }
-  }
-
-  &__author {
-    @media (min-width: $mobile) {
-      padding: 20px 0 25px;
-    }
     @media (min-width: $tablet) {
-      padding-top: 40px;
+      outline: 1px red solid;
     }
-    @media (min-width: $desktop) {
-      padding-top: 65px;
-    }
-
-    > div {
-      @include sedona_container();
-      display: flex;
-      align-items: center;
-      overflow: hidden;
-      margin-bottom: 20px;
-      &:last-of-type {
-        margin-bottom: 0;
-      }
-      .feedback__label {
-        margin-right: 13px;
-      }
-      .feedback__input {
-        flex-grow: 1;
-      }
-    }
-  }
-
-  &__contacts {
-    @media (min-width: $mobile) {
-      padding: 20px 0 28px;
-    }
-
-    .feedback__title {
-      @media (min-width: $mobile) {
-        margin-bottom: 20px !important;
-      }
-    }
-
-    > div {
-      @include sedona_container();
-      .feedback__label {
-        @media (min-width: $mobile) {
-          display: block;
-          margin-bottom: 10px;
-          margin-left: 22px;
-        }
-      }
-
-      .feedback__input {
-        @media (min-width: $mobile) {
-          width: 100%;
-        }
-      }
-
-      .feedback__input--phone {
-        margin-bottom: 15px;
-      }
-    }
-  }
-
-  &__impression {
-    @media (min-width: $mobile) {
-      padding: 20px 0 27px;
-    }
-
-    .feedback__title {
-      @media (min-width: $mobile) {
-        margin-bottom: 26px !important;
-      }
-    }
-
-    > div {
-      @include sedona_container();
-      @media (min-width: $mobile) {
-        margin-bottom: 15px;
-        &:last-of-type {
-          margin-bottom: 0;
-        }
-      }
-    }
-  }
-
-  &__sights {
-    @media (min-width: $mobile) {
-      padding: 20px 0 25px;
-    }
-
-    .feedback__title {
-      @media (min-width: $mobile) {
-        margin-bottom: 15px !important;
-      }
-    }
-
-    > div {
-      @include sedona_container();
-      @media (min-width: $mobile) {
-        margin-bottom: 25px;
-        &:last-of-type {
-          margin-bottom: 0;
-        }
-      }
-    }
-  }
-
-  &__emotions {
-    @media (min-width: $mobile) {
-      padding: 20px 0 51px;
-    }
-    .feedback__title {
-      @media (min-width: $mobile) {
-        margin-bottom: 20px !important;
-      }
-    }
-    /* обертка для корректного растяжения textarea по центру */
-    .feedback__textreview--container {
-      @include sedona_container();
-      .feedback__textreview {
-        width: 100%;
-        vertical-align: top;
-      }
-    }
+  ;
   }
 
   .feedback__title {
-    text-align: center;
+    display: block;
     @media (min-width: $mobile) {
       @include sedona_title();
+      text-align: center;
     }
     @media (min-width: $tablet) {
       font-size: 21px;
@@ -175,7 +61,7 @@
   .feedback__checkbox,
   .feedback__radio {
     @media (min-width: $mobile) {
-      margin-right: 24px;
+      margin: 0 24px 0 0;
     }
   }
 
@@ -187,24 +73,246 @@
     line-height: 26px;
   }
 
-  .feedback__send--container {
-    @include sedona_container();
-    .feedback__send {
-      @extend body;
-      border: none;
-      width: 100%;
-      padding: 18px 0;
-      margin: 0 auto !important;
+  &__author {
+    outline: none;
+    @media (min-width: $mobile) {
+      padding: 20px 0 25px;
+    }
+    @media (min-width: $tablet) {
+      padding: 40px 0 35px;
+      width: calc(50% - 58px);
+      margin-left: 58px;
+    }
+    @media (min-width: $desktop) {
+      padding-top: 65px;
+      padding-bottom: 35px;
+    }
+
+    .feedback__title {
+      @media (min-width: $tablet) {
+        text-align: left;
+      }
+    }
+
+    > div {
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      @media (min-width: $mobile) {
+        @include sedona_container();
+        margin-bottom: 20px;
+        &:last-of-type {
+          margin-bottom: 0;
+        }
+      }
+      @media (min-width: $tablet) {
+        width: 100%;
+        justify-content: flex-start;
+      }
+      .feedback__label {
+        margin-right: 13px;
+      }
+      .feedback__input {
+        flex-grow: 1;
+        @media (min-width: $tablet) {
+          width: 180px;
+        }
+      }
     }
   }
 
-  .feedback__note {
-    font-weight: $regular;
-    font-size: 14px;
-    line-height: 26px;
-    color: rgb(51, 51, 51);
-    @media (min-width: $mobile) and (max-width: $tablet - 1) {
-      display: none;
+  &__contacts {
+    @media (min-width: $mobile) {
+      padding: 20px 0 28px;
+    }
+    @media (min-width: $tablet) {
+      width: 100%;
+      padding: 35px 0 28px;
+    }
+
+    .feedback__title {
+      @media (min-width: $mobile) {
+        margin-bottom: 20px !important;
+      }
+    }
+
+    > div {
+      @media (min-width: $mobile) {
+        @include sedona_container();
+      }
+      @media (min-width: $tablet) {
+        width: 100%;
+      }
+      .feedback__label {
+        @media (min-width: $mobile) {
+          display: block;
+          margin-bottom: 10px;
+          margin-left: 22px;
+        }
+      }
+
+      .feedback__input {
+        @media (min-width: $mobile) {
+          width: 100%;
+        }
+      }
+
+      .feedback__input--phone {
+        margin-bottom: 15px;
+      }
     }
   }
+
+  &__impression {
+    outline: none;
+    @media (min-width: $mobile) {
+      padding: 20px 0 27px;
+    }
+    @media (min-width: $tablet) {
+      order: -1;
+      width: 50%;
+      padding: 40px 0 35px;
+    }
+
+    .feedback__title {
+      @media (min-width: $mobile) {
+        margin-bottom: 26px !important;
+      }
+      @media (min-width: $tablet) {
+        text-align: left;
+        margin-bottom: 62px !important;
+      }
+    }
+
+    > div {
+      @include sedona_container();
+      @media (min-width: $mobile) {
+        margin-bottom: 15px;
+        &:last-of-type {
+          margin-bottom: 0;
+        }
+      }
+      @media (min-width: $tablet) {
+        margin-left: 0;
+        width: 100%;
+      }
+    }
+  }
+
+  &__sights {
+    @media (min-width: $mobile) {
+      padding: 20px 0 25px;
+    }
+    @media (min-width: $tablet) {
+      width: 100%;
+      padding: 20px 0 35px;
+    }
+
+    .feedback__title {
+      @media (min-width: $mobile) {
+        margin-bottom: 15px !important;
+      }
+      @media (min-width: $tablet) {
+        width: 280px;
+        text-align: center;
+        margin-bottom: 25px !important;
+      }
+    }
+
+    .feedback__wrapper {
+      @media (min-width: $mobile) {
+        @include sedona_container();
+      }
+      @media (min-width: $tablet) {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 540px;
+      }
+
+      > div {
+        @media (min-width: $mobile) {
+          margin-bottom: 25px;
+          &:last-of-type {
+            margin-bottom: 0;
+          }
+        }
+        @media (min-width: $tablet) {
+          outline: 1px black solid;
+          margin: 0 0 30px;
+          width: 229px;
+          &:nth-of-type(2n+1) {
+            margin-right: 60px;
+          }
+          &:nth-last-of-type(2) {
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+
+  &__emotions {
+    @media (min-width: $mobile) {
+      padding: 20px 0 51px;
+    }
+    @media (min-width: $tablet) {
+      width: 100%;
+      padding: 35px 0 58px;
+    }
+    .feedback__title {
+      @media (min-width: $mobile) {
+        margin-bottom: 20px !important;
+      }
+      @media (min-width: $tablet) {
+        margin-bottom: 60px !important;
+      }
+    }
+    /* обертка для корректного растяжения textarea по центру */
+    .feedback__textreview--container {
+      @media (min-width: $mobile) and (max-width: $tablet - 1) {
+        @include sedona_container();
+      }
+      .feedback__textreview {
+        width: 100%;
+        vertical-align: top;
+      }
+    }
+  }
+
+  .feedback__send--container {
+    @media (min-width: $mobile) and (max-width: $tablet - 1) {
+      @include sedona_container();
+    }
+    @media (min-width: $tablet) {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+    }
+    .feedback__send {
+      @extend body;
+      border: none;
+      padding: 18px 0;
+      @media (min-width: $mobile) and (max-width: $tablet - 1) {
+        margin: 0 auto !important;
+      }
+      @media (min-width: $tablet) {
+        width: 324px;
+      }
+    }
+
+    .feedback__note {
+      font-weight: $regular;
+      font-size: 14px;
+      line-height: 26px;
+      color: rgb(51, 51, 51);
+      @media (min-width: $mobile) and (max-width: $tablet - 1) {
+        display: none;
+      }
+      @media (min-width: $tablet) {
+        display: block;
+      }
+    }
+  }
+
 }

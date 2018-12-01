@@ -7,12 +7,13 @@
   @media (min-width: $mobile) {
     padding-top: 200px;
     padding-bottom: 30px;
+  }
+  @media (min-width: $mobile) and (max-width: $tablet - 1) {
     @include sedona_border();
   }
   @media (min-width: $tablet) {
     padding-top: 365px;
     padding-bottom: 40px;
-    border-bottom: none;
   }
   @media (min-width: $desktop) {
     padding-top: 415px;

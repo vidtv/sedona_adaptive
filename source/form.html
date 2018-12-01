@@ -93,26 +93,30 @@
                 </section>
                 <section class="feedback__sights">
                     <b class="feedback__title">Посещенные достопримечательности:</b>
-                    <div class="feedback__devil-bridge">
-                        <input class="feedback__checkbox feedback__checkbox--checked" id="feedback__devil-bridge"
-                               type="checkbox" name="devil-bridge" checked>
-                        <label class="feedback__label feedback__label--checkbox feedback__label--devil-bridge"
-                               for="feedback__devil-bridge">Мост Дьявола</label>
-                    </div>
-                    <div class="feedback__mountain">
-                        <input class="feedback__checkbox feedback__checkbox--checked" id="feedback__mountain" type="checkbox" name="red-mountain" checked>
-                        <label class="feedback__label feedback__label--checkbox feedback__label--mountain"
-                               for="feedback__mountain">Гора-Колокол</label>
-                    </div>
-                    <div class="feedback__slide-park">
-                        <input class="feedback__checkbox feedback__checkbox--checked" id="feedback__slide-park" type="checkbox" name="slide-park" checked>
-                        <label class="feedback__label feedback__label--checkbox feedback__label--slide-park"
-                               for="feedback__slide-park">Слайд-парк</label>
-                    </div>
-                    <div class="feedback__red-rocks">
-                        <input class="feedback__checkbox" id="feedback__red-rocks" type="checkbox" name="red-rocks">
-                        <label class="feedback__label feedback__label--checkbox feedback__label--red-rocks"
-                               for="feedback__red-rocks">Красные скалы</label>
+                    <div class="feedback__wrapper">
+                        <div class="feedback__devil-bridge">
+                            <input class="feedback__checkbox feedback__checkbox--checked" id="feedback__devil-bridge"
+                                   type="checkbox" name="devil-bridge" checked>
+                            <label class="feedback__label feedback__label--checkbox feedback__label--devil-bridge"
+                                   for="feedback__devil-bridge">Мост Дьявола</label>
+                        </div>
+                        <div class="feedback__mountain">
+                            <input class="feedback__checkbox feedback__checkbox--checked" id="feedback__mountain"
+                                   type="checkbox" name="red-mountain" checked>
+                            <label class="feedback__label feedback__label--checkbox feedback__label--mountain"
+                                   for="feedback__mountain">Гора-Колокол</label>
+                        </div>
+                        <div class="feedback__slide-park">
+                            <input class="feedback__checkbox feedback__checkbox--checked" id="feedback__slide-park"
+                                   type="checkbox" name="slide-park" checked>
+                            <label class="feedback__label feedback__label--checkbox feedback__label--slide-park"
+                                   for="feedback__slide-park">Слайд-парк</label>
+                        </div>
+                        <div class="feedback__red-rocks">
+                            <input class="feedback__checkbox" id="feedback__red-rocks" type="checkbox" name="red-rocks">
+                            <label class="feedback__label feedback__label--checkbox feedback__label--red-rocks"
+                                   for="feedback__red-rocks">Красные скалы</label>
+                        </div>
                     </div>
                 </section>
                 <section class="feedback__emotions">
@@ -124,8 +128,9 @@
                 </section>
                 <div class="feedback__send--container">
                     <button class="button feedback__send" type="submit">Отправить отзыв</button>
+
+                    <span class="feedback__note">* - обязательные поля</span>
                 </div>
-                <span class="feedback__note">* - обязательные поля</span>
             </form>
         </main>
         <footer class="page-footer">
@@ -155,7 +160,7 @@
         </div>
         <div class="popup popup--success" style="display: none;">
             <b class="popup__title popup__title-success">Ваш отзыв отправлен!</b>
-            <p class="popup__desc popup__desc--success">Спасибо за ваше участие, ваш отзыв уже поступил к нам.
+            <p class="popup__desc popup__desc--success">Спасибо за ваше участие, ваш отзыв уже поступил к нам.<br>
                 В ближайшее время мы опубликуем его на сайте.</p>
             <button class="button popup__close popup__close--success" type="button">Закрыть окно</button>
         </div>
