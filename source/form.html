@@ -60,16 +60,19 @@
                 </section>
                 <section class="feedback__contacts">
                     <b class="feedback__title">Контактная информация:</b>
-                    <div class="feedback__phone">
-                        <label class="feedback__label feedback__label--phone" for="feedback__input--phone">Контактный телефон*:</label>
-                        <input class="feedback__input feedback__input--text feedback__input--phone"
-                               id="feedback__input--phone" type="text" placeholder="Введите телефон">
-                    </div>
-                    <div class="feedback__email">
-                        <label class="feedback__label feedback__label--email" for="feedback__input--email">Электронная
-                            почта*:</label>
-                        <input class="feedback__input feedback__input--text feedback__input--email"
-                               id="feedback__input--email" type="text" placeholder="Введите e-mail">
+                    <div class="feedback__wrapper">
+                        <div class="feedback__phone">
+                            <label class="feedback__label feedback__label--phone" for="feedback__input--phone">
+                                <span class="feedback__hidden--desktop">Контактный </span>телефон*:</label>
+                            <input class="feedback__input feedback__input--text feedback__input--phone"
+                                   id="feedback__input--phone" type="text" placeholder="Введите телефон">
+                        </div>
+                        <div class="feedback__email">
+                            <label class="feedback__label feedback__label--email" for="feedback__input--email">Электронная
+                                почта*:</label>
+                            <input class="feedback__input feedback__input--text feedback__input--email"
+                                   id="feedback__input--email" type="text" placeholder="Введите e-mail">
+                        </div>
                     </div>
                 </section>
                 <section class="feedback__impression">
@@ -128,7 +131,6 @@
                 </section>
                 <div class="feedback__send--container">
                     <button class="button feedback__send" type="submit">Отправить отзыв</button>
-
                     <span class="feedback__note">* - обязательные поля</span>
                 </div>
             </form>

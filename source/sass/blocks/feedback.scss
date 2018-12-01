@@ -11,6 +11,9 @@
     flex-wrap: wrap;
     @include sedona_container();
   }
+  @media (min-width: $desktop) {
+    padding-bottom: 70px;
+  }
 
   > section {
     @media (min-width: $mobile) and (max-width: $tablet - 1) {
@@ -84,8 +87,10 @@
       margin-left: 58px;
     }
     @media (min-width: $desktop) {
-      padding-top: 65px;
+      padding-top: 35px;
       padding-bottom: 35px;
+      margin-left: 80px;
+      width: calc(50% - 80px);
     }
 
     .feedback__title {
@@ -134,31 +139,64 @@
       @media (min-width: $mobile) {
         margin-bottom: 20px !important;
       }
+      @media (min-width: $desktop) {
+        margin-bottom: 75px !important;
+      }
     }
 
-    > div {
-      @media (min-width: $mobile) {
-        @include sedona_container();
+    .feedback__wrapper {
+      @media (min-width: $desktop) {
+        display: flex;
       }
-      @media (min-width: $tablet) {
-        width: 100%;
-      }
-      .feedback__label {
+      > div {
         @media (min-width: $mobile) {
-          display: block;
-          margin-bottom: 10px;
-          margin-left: 22px;
+          @include sedona_container();
         }
-      }
-
-      .feedback__input {
-        @media (min-width: $mobile) {
+        @media (min-width: $tablet) {
           width: 100%;
         }
+        @media (min-width: $desktop) {
+          display: flex;
+          align-items: center;
+        }
+        .feedback__label {
+          @media (min-width: $mobile) and (max-width: $desktop - 1) {
+            display: block;
+            margin-bottom: 10px;
+            margin-left: 22px;
+          }
+          @media (min-width: $desktop) {
+            margin-right: 15px;
+          }
+        }
+
+        .feedback__input {
+          @media (min-width: $mobile) and (max-width: $desktop - 1) {
+            width: 100%;
+          }
+          @media (min-width: $desktop) {
+            flex-grow: 1;
+          }
+        }
+
+        .feedback__input--phone {
+          margin-bottom: 15px;
+          @media (min-width: $desktop) {
+            margin-bottom: 0;
+          }
+        }
       }
 
-      .feedback__input--phone {
-        margin-bottom: 15px;
+      .feedback__phone {
+        @media (min-width: $desktop) {
+          margin-right: 80px;
+          flex-shrink: 1.15;
+        }
+        .feedback__hidden--desktop {
+          @media (min-width: $desktop) {
+            display: none;
+          }
+        }
       }
     }
   }
@@ -173,6 +211,9 @@
       width: 50%;
       padding: 40px 0 35px;
     }
+    @media (min-width: $desktop) {
+      padding: 35px 0 0 0;
+    }
 
     .feedback__title {
       @media (min-width: $mobile) {
@@ -181,6 +222,9 @@
       @media (min-width: $tablet) {
         text-align: left;
         margin-bottom: 62px !important;
+      }
+      @media (min-width: $desktop) {
+        margin-left: 80px;
       }
     }
 
@@ -207,6 +251,9 @@
       width: 100%;
       padding: 20px 0 35px;
     }
+    @media (min-width: $desktop) {
+      padding: 20px 0 15px;
+    }
 
     .feedback__title {
       @media (min-width: $mobile) {
@@ -220,7 +267,7 @@
     }
 
     .feedback__wrapper {
-      @media (min-width: $mobile) {
+      @media (min-width: $mobile) and (max-width: $desktop - 1) {
         @include sedona_container();
       }
       @media (min-width: $tablet) {
@@ -229,9 +276,14 @@
         justify-content: center;
         width: 540px;
       }
+      @media (min-width: $desktop) {
+        width: 100%;
+        justify-content: space-between;
+        flex-wrap: wrap;
+      }
 
       > div {
-        @media (min-width: $mobile) {
+        @media (min-width: $mobile) and (max-width: $desktop - 1) {
           margin-bottom: 25px;
           &:last-of-type {
             margin-bottom: 0;
@@ -239,7 +291,9 @@
         }
         @media (min-width: $tablet) {
           outline: 1px black solid;
-          margin: 0 0 30px;
+          margin: 0 0 15px;
+        }
+        @media (min-width: $tablet) and (max-width: $desktop - 1) {
           width: 229px;
           &:nth-of-type(2n+1) {
             margin-right: 60px;
@@ -299,6 +353,9 @@
       @media (min-width: $tablet) {
         width: 324px;
       }
+      @media (min-width: $desktop) {
+        width: 480px;
+      }
     }
 
     .feedback__note {
@@ -311,6 +368,7 @@
       }
       @media (min-width: $tablet) {
         display: block;
+        align-self: center;
       }
     }
   }
