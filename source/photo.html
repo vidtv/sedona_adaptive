@@ -40,7 +40,9 @@
     </header>
     <section class="photos__gallery">
         <figure class="photos__item">
-            <img class="photos__pic" src="1.jpg" width="280" height="280" alt="Неродные просторы">
+            <div class="photos__pic">
+                <img class="photos__pic--image" src="1.jpg" alt="Неродные просторы">
+            </div>
             <div class="photos__info">
                 <div class="photos__title">Неродные просторы</div>
                 <p class="photos__author">Автор фото: <span class="photos__name">Борис</span></p>
@@ -51,7 +53,9 @@
             </div>
         </figure>
         <figure class="photos__item">
-            <img class="photos__pic" src="2.jpg" width="280" height="280" alt="Местная растительность">
+            <div class="photos__pic">
+                <img class="photos__pic--image" src="2.jpg" alt="Местная растительность">
+            </div>
             <div class="photos__info">
                 <div class="photos__title">Местная растительность</div>
                 <p class="photos__author">Автор фото: <span class="photos__name">Сергей</span></p>
@@ -62,7 +66,9 @@
             </div>
         </figure>
         <figure class="photos__item">
-            <img class="photos__pic" src="3.jpg" width="280" height="280" alt="Дорога на север">
+            <div class="photos__pic">
+                <img class="photos__pic--image" src="3.jpg" alt="Дорога на север">
+            </div>
             <div class="photos__info">
                 <div class="photos__title">Дорога на север</div>
                 <p class="photos__author">Автор фото: <span class="photos__name">Петр</span></p>
@@ -73,7 +79,9 @@
             </div>
         </figure>
         <figure class="photos__item">
-            <img class="photos__pic" src="4.jpg" width="280" height="280" alt="Мост дьявола">
+            <div class="photos__pic">
+                <img class="photos__pic--image" src="4.jpg" alt="Мост дьявола">
+            </div>
             <div class="photos__info">
                 <div class="photos__title">Мост дьявола</div>
                 <p class="photos__author">Автор фото: <span class="photos__name">Антон</span></p>
@@ -88,13 +96,18 @@
         <b class="video__title">Все еще сомневаетесь?</b>
         <p class="photos__desc video__desc">Смотрите видеопрезентацию и скорее за билетами,
             пока они не подорожали в очередной раз!</p>
-        <video class="video__player"></video>
-        <div class="video__controls">
-            <div class="video__timing"></div>
-            <div class="video__buttons">
-                <div class="video__back"></div>
-                <div class="video__subtitles"></div>
-                <div class="video__fullscreen"></div>
+        <div class="video__player">
+            <div class="video__controls">
+                <div class="video__timing">
+                    <div class="video__timescale">
+                        <div class="video__timepoint"></div>
+                    </div>
+                </div>
+                <div class="video__buttons">
+                    <div class="video__back"></div>
+                    <div class="video__subtitles"></div>
+                    <div class="video__fullscreen"></div>
+                </div>
             </div>
         </div>
     </section>

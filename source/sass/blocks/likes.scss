@@ -1,8 +1,18 @@
 @import "../variables";
 
 .likes {
+  display: flex;
+  .likes__button {
+    cursor: pointer;
+    width: 22px;
+    height: 21px;
+    margin-right: 15px;
+    outline: 1px solid yellow;
+  }
+
   .likes__number {
-    @extend .photos__title;
+    font-size: 14px;
+    line-height: 24px;
     background: none;
     @media (min-width: $mobile) {
       color: black;

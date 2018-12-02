@@ -2,22 +2,95 @@
 
 .video {
   text-align: center;
+  @media (min-width: $mobile) {
+    padding: 35px 0 100px;
+  }
   .video__title {
     line-height: 26px;
+    display: block;
     @media (min-width: $mobile) {
       font-size: 18px;
+      margin-bottom: 30px;
     }
     @media (min-width: $tablet) {
       font-size: 30px;
     }
   }
 
-  .video__controls {
-    background: rgba(0, 0, 0, 0.6);
+  .video__desc {
+    @media (min-width: $mobile) {
+      width: 240px;
+      margin-bottom: 37px;
+    }
+  }
 
-    .video__buttons {
-      @media (max-width: $tablet - 1) {
-        background: rgb(242, 242, 242);
+  .video__player {
+    position: relative;
+    outline: 1px red solid;
+    @media (min-width: $mobile) {
+      width: 100%;
+      min-height: 201px;
+    }
+    .video__controls {
+      @include sedona_container();
+      position: absolute;
+      @media (min-width: $mobile) {
+        bottom: -66px;
+        left: 20px;
+      }
+      background: rgba(0, 0, 0, 0.6);
+      .video__timing {
+        height: 23px;
+        .video__timescale {
+          position: relative;
+          background: rgba(0, 0, 0, 0.2);
+          height: 3px;
+          @media (min-width: $mobile) {
+            margin: 22px 22px 0;
+          }
+          .video__timepoint {
+            cursor: pointer;
+            background: white;
+            width: 9px;
+            height: 9px;
+            border-radius: 5px;
+            position: absolute;
+            left: 15%;
+            bottom: -3px;
+          }
+        }
+      }
+      .video__buttons {
+        position: relative;
+        @media (max-width: $tablet - 1) {
+          background: rgb(242, 242, 242);
+          height: 66px;
+        }
+
+        > div {
+          cursor: pointer;
+          position: absolute;
+          outline: 1px blue solid;
+          @media (min-width: $mobile) {
+            top: 22px;
+            height: 20px;
+          }
+        }
+
+        .video__back {
+          left: 25px;
+          width: 16px;
+        }
+
+        .video__subtitles {
+          right: 74px;
+          width: 32px;
+        }
+
+        .video__fullscreen {
+          right: 23px;
+          width: 20px;
+        }
       }
     }
   }
