@@ -1,0 +1,35 @@
+@import "../variables",
+"../mixins";
+
+.copyright {
+  @media (min-width: $mobile) {
+    margin-bottom: 30px;
+  }
+  @media (min-width: $tablet) {
+    width: 33.33%;
+    margin: 0;
+  }
+
+  .copyright__wrapper {
+    margin: 0 auto;
+    @media (min-width: $mobile) {
+      width: 130px;
+    }
+    .copyright__link {
+      @include sedona_desc();
+      position: relative;
+      line-height: 26px;
+      color: black;
+      text-decoration: none;
+      &:after {
+        position: absolute;
+        right: -38px;
+        top: -8px;
+        content: "";
+        width: 27px;
+        height: 34px;
+        outline: 1px solid black;
+      }
+    }
+  }
+}

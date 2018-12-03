@@ -1,0 +1,21 @@
+@import "../variables";
+
+.page-header {
+  position: relative;
+
+  @media (min-width: $mobile) {
+    padding-bottom: 56px;
+  }
+
+  @media (min-width: $tablet) {
+    height: 56px;
+  }
+
+  .page-header__logo {
+    position: absolute;
+    left: calc(50% - 51px);
+    @media (min-width: $tablet) {
+      top: 0;
+    }
+  }
+}

@@ -1,0 +1,138 @@
+@import "../variables";
+
+.video {
+  text-align: center;
+  @media (min-width: $mobile) {
+    padding: 35px 0 100px;
+  }
+  @media (min-width: $tablet) {
+    padding: 68px 0 50px;
+  }
+  @media (min-width: $desktop) {
+    padding-bottom: 95px;
+  }
+  .video__title {
+    line-height: 26px;
+    display: block;
+    @media (min-width: $mobile) {
+      font-size: 18px;
+      margin-bottom: 30px;
+    }
+    @media (min-width: $tablet) {
+      font-size: 30px;
+    }
+  }
+
+  .video__desc {
+    @media (min-width: $mobile) and (max-width: $tablet - 1) {
+      width: 240px;
+      margin-bottom: 37px;
+    }
+    @media (min-width: $tablet) {
+      margin-bottom: 75px;
+    }
+  }
+
+  .video__player {
+    position: relative;
+    outline: 1px red solid;
+    @media (min-width: $mobile) {
+      width: 100%;
+      height: 201px;
+    }
+    @media (min-width: $tablet) {
+      @include sedona_container();
+      max-width: 800px;
+      height: 500px;
+    }
+    .video__controls {
+      @include sedona_container();
+      position: absolute;
+      @media (min-width: $mobile) {
+        bottom: -66px;
+        left: 20px;
+      }
+      @media (min-width: $tablet) {
+        width: 100%;
+        height: 93px;
+        left: 0;
+        bottom: 0;
+      }
+      background: rgba(0, 0, 0, 0.6);
+      .video__timing {
+        height: 23px;
+        .video__timescale {
+          position: relative;
+          background: rgba(0, 0, 0, 0.2);
+          height: 3px;
+          @media (min-width: $mobile) {
+            margin: 22px 22px 0;
+          }
+          @media (min-width: $tablet) {
+            margin: 45px 166px 45px 93px;
+          }
+          .video__timepoint {
+            cursor: pointer;
+            background: white;
+            width: 9px;
+            height: 9px;
+            border-radius: 5px;
+            position: absolute;
+            left: 15%;
+            bottom: -3px;
+          }
+        }
+      }
+      .video__buttons {
+        position: relative;
+        @media (max-width: $tablet - 1) {
+          background: rgb(242, 242, 242);
+          height: 66px;
+        }
+
+        > div {
+          cursor: pointer;
+          position: absolute;
+          outline: 1px blue solid;
+          @media (min-width: $mobile) {
+            top: 22px;
+            height: 20px;
+          }
+          @media (min-width: $tablet) {
+            top: -32px;
+          }
+        }
+
+        .video__back {
+          width: 16px;
+          @media (min-width: $mobile) {
+            left: 25px;
+          }
+          @media (min-width: $tablet) {
+            left: 35px;
+          }
+        }
+
+        .video__subtitles {
+          width: 32px;
+          @media (min-width: $mobile) {
+            right: 74px;
+          }
+          @media (min-width: $tablet) {
+            right: 92px;
+          }
+        }
+
+        .video__fullscreen {
+          width: 20px;
+          @media (min-width: $mobile) {
+            right: 23px;
+          }
+          @media (min-width: $tablet) {
+            right: 41px;
+          }
+        }
+      }
+    }
+  }
+}

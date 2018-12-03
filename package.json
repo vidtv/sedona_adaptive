@@ -1,0 +1,22 @@
+{
+  "name": "sedona",
+  "version": "14.0.0",
+  "private": true,
+  "description": "Личный проект «Седона» от HTML Academy",
+  "devDependencies": {
+    "gulp": "3.9.x",
+    "gulp-sass": "4.0.x"
+  },
+  "scripts": {
+    "start": "gulp serve",
+    "build": "gulp style"
+  },
+  "engines": {
+    "node": "10.13.0"
+  },
+  "dependencies": {
+    "browser-sync": "^2.26.3",
+    "gulp-plumber": "^1.2.0",
+    "gulp-postcss": "^8.0.0"
+  }
+}

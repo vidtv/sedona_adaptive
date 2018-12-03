@@ -1,0 +1,37 @@
+@mixin sedona_title() {
+  line-height: 26px;
+  display: block;
+  margin: 0 auto;
+  @media (min-width: $mobile) {
+    font-size: 18px;
+  }
+  @media (min-width: $tablet) {
+    font-size: 21px;
+  }
+}
+
+@mixin sedona_desc() {
+  font-family: 'PT Sans', sans-serif;
+  font-weight: $regular;
+  font-size: 14px;
+  line-height: 21px;
+  color: rgb(51, 51, 51);
+  margin: 0 auto;
+}
+
+@mixin sedona_border() {
+  border-top: 1px solid rgb(214, 214, 214);
+}
+
+@mixin sedona_container() {
+  margin: 0 auto;
+  @media (min-width: $mobile) {
+    width: calc(100% - 40px);
+  }
+  @media (min-width: $tablet) {
+    width: calc(100% - 120px);
+  }
+  @media (min-width: $desktop) {
+    width: calc(100% - 240px);
+  }
+}

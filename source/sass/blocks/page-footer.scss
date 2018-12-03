@@ -1,0 +1,21 @@
+@import "../variables";
+
+.page-footer {
+  @media (min-width: $tablet) {
+    display: flex;
+    align-items: center;
+  }
+
+  .page-footer__title {
+    display: block;
+    font-size: 21px;
+    line-height: 26px;
+    text-align: center;
+    @media (min-width: $mobile) {
+      margin: 40px auto;
+    }
+    @media (min-width: $tablet) {
+      width: 33.33%;
+    }
+  }
+}

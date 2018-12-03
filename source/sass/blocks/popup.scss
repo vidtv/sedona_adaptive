@@ -1,0 +1,99 @@
+@import "../variables",
+"../mixins";
+
+.popup {
+  outline: 1px blue solid;
+  text-align: center;
+  margin: 0 auto;
+  @media (min-width: $mobile) {
+    width: $mobile - 40px;
+    padding: 40px 20px 35px;
+  }
+  @media (min-width: $tablet) {
+    width: 400px;
+    padding: 60px 0 50px;
+  }
+  .popup__title {
+    display: block;
+    margin: 0 auto;
+    @media (min-width: $mobile) {
+      font-size: 18px;
+      line-height: 26px;
+    }
+    @media (min-width: $tablet) {
+      font-size: 30px;
+      line-height: 40px;
+      width: 215px;
+    }
+  }
+
+  .popup__desc {
+    font-weight: $regular;
+    font-size: 14px;
+    line-height: 24px;
+    color: rgb(51, 51, 51);
+    margin: 30px auto 25px;
+    @media (min-width: $mobile) {
+      width: 216px;
+    }
+    @media (min-width: $tablet) {
+      width: 280px;
+    }
+  }
+
+  button {
+    @extend body;
+    border: none;
+    line-height: 26px;
+    @media (min-width: $mobile) {
+      font-size: 18px;
+      padding: 18px;
+      width: 180px;
+    }
+    @media (min-width: $tablet) {
+      font-size: 21px;
+      width: 272px;
+    }
+  }
+}
+
+.popup--success {
+  padding: 0;
+  @media (min-width: $mobile) {
+    width: 320px;
+    padding-top: 45px;
+  }
+  @media (min-width: $tablet) {
+    width: 648px;
+  }
+
+  .popup__title {
+    width: 340px;
+  }
+
+  .popup__desc {
+    margin-bottom: 35px;
+    @media (min-width: $tablet) {
+      width: 415px;
+    }
+  }
+
+  .popup__button-container {
+    background: rgb(242, 242, 242);
+    @media (min-width: $mobile) {
+      width: 280px;
+      padding: 20px;
+    }
+    @media (min-width: $tablet) {
+      width: 458px;
+      padding: 45px 95px;
+    }
+    button {
+      @media (min-width: $mobile) {
+        width: 100%;
+      }
+    }
+  }
+
+
+}

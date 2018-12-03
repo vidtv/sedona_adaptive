@@ -1,0 +1,71 @@
+@import "../variables",
+"../mixins";
+
+.features {
+  @media (min-width: $tablet) {
+    display: flex;
+  }
+
+  .features__item {
+    @media (min-width: $mobile) {
+      padding-left: 22%;
+      padding-top: 40px;
+      &:last-of-type {
+        padding-bottom: 40px;
+      }
+    }
+    @media (min-width: $tablet) {
+      width: 33.33%;
+      padding-left: 0;
+      padding-top: 160px;
+      padding-bottom: 62px;
+      &:nth-of-type(2) {
+        .features__desc {
+          width: 160px;
+        }
+      }
+    }
+    @media (min-width: $desktop) {
+      padding-bottom: 85px;
+      &:nth-of-type(2) {
+        .features__desc {
+          width: 285px;
+        }
+      }
+    }
+  }
+
+  .features__title,
+  .features__desc {
+    @media (min-width: $tablet) {
+      margin: 0 auto;
+      text-align: center;
+    }
+  }
+
+  .features__title {
+    @include sedona_title();
+    @media (min-width: $mobile) {
+      margin-bottom: 18px;
+      margin-left: 0;
+    }
+    @media (min-width: $tablet) {
+      margin-bottom: 25px;
+    }
+  }
+
+  .features__desc {
+    @include sedona_desc();
+    @media (min-width: $mobile) {
+      width: 210px;
+      margin-left: 0;
+    }
+    @media (min-width: $tablet) {
+      width: 163px;
+      margin: 0 auto;
+    }
+    @media (min-width: $desktop) {
+      width: 285px;
+    }
+  }
+}

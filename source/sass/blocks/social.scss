@@ -1,0 +1,22 @@
+@import "../variables";
+
+.social {
+  display: flex;
+  @media (min-width: $mobile) {
+    padding: 0;
+    margin-bottom: 40px;
+    justify-content: center;
+  }
+  @media (min-width: $tablet) {
+    width: 33.33%;
+    margin: 0;
+  }
+  .social__item {
+    cursor: pointer;
+    background: $light-blue;
+    list-style-type: none;
+    width: 46px;
+    height: 48px;
+    margin-right: 6px;
+  }
+}

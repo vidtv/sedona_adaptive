@@ -1,0 +1,375 @@
+@import "../variables",
+"../mixins";
+
+.feedback {
+
+  @media (min-width: $mobile) {
+    padding-bottom: 38px;
+  }
+  @media (min-width: $tablet) {
+    display: flex;
+    flex-wrap: wrap;
+    @include sedona_container();
+  }
+  @media (min-width: $desktop) {
+    padding-bottom: 70px;
+  }
+
+  > section {
+    @media (min-width: $mobile) and (max-width: $tablet - 1) {
+      @include sedona_border();
+    }
+    @media (min-width: $tablet) {
+      outline: 1px red solid;
+    }
+  }
+
+  .feedback__title {
+    display: block;
+    @media (min-width: $mobile) {
+      @include sedona_title();
+      text-align: center;
+    }
+    @media (min-width: $tablet) {
+      font-size: 21px;
+    }
+  }
+
+  .feedback__name {
+    @media (min-width: $mobile) {
+      margin-top: 23px;
+    }
+  }
+
+  .feedback__input--text,
+  .feedback__textreview {
+    @extend body;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    padding: 18px;
+    background-color: $input-bgcolor;
+    text-transform: none !important;
+    font-size: 18px;
+    line-height: 26px;
+  }
+
+  .feedback__label {
+    font-weight: $regular;
+    font-size: 14px;
+    line-height: 26px;
+  }
+
+  .feedback__checkbox,
+  .feedback__radio {
+    @media (min-width: $mobile) {
+      margin: 0 24px 0 0;
+    }
+  }
+
+  .feedback__label--radio,
+  .feedback__label--checkbox {
+    text-transform: none;
+    font-weight: $bold;
+    font-size: 18px;
+    line-height: 26px;
+  }
+
+  &__author {
+    outline: none;
+    @media (min-width: $mobile) {
+      padding: 20px 0 25px;
+    }
+    @media (min-width: $tablet) {
+      padding: 40px 0 35px;
+      width: calc(50% - 58px);
+      margin-left: 58px;
+    }
+    @media (min-width: $desktop) {
+      padding-top: 35px;
+      padding-bottom: 35px;
+      margin-left: 80px;
+      width: calc(50% - 80px);
+    }
+
+    .feedback__title {
+      @media (min-width: $tablet) {
+        text-align: left;
+      }
+    }
+
+    > div {
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      @media (min-width: $mobile) {
+        @include sedona_container();
+        margin-bottom: 20px;
+        &:last-of-type {
+          margin-bottom: 0;
+        }
+      }
+      @media (min-width: $tablet) {
+        width: 100%;
+        justify-content: flex-start;
+      }
+      .feedback__label {
+        margin-right: 13px;
+      }
+      .feedback__input {
+        flex-grow: 1;
+        @media (min-width: $tablet) {
+          width: 180px;
+        }
+      }
+    }
+  }
+
+  &__contacts {
+    @media (min-width: $mobile) {
+      padding: 20px 0 28px;
+    }
+    @media (min-width: $tablet) {
+      width: 100%;
+      padding: 35px 0 28px;
+    }
+
+    .feedback__title {
+      @media (min-width: $mobile) {
+        margin-bottom: 20px !important;
+      }
+      @media (min-width: $desktop) {
+        margin-bottom: 75px !important;
+      }
+    }
+
+    .feedback__wrapper {
+      @media (min-width: $desktop) {
+        display: flex;
+      }
+      > div {
+        @media (min-width: $mobile) {
+          @include sedona_container();
+        }
+        @media (min-width: $tablet) {
+          width: 100%;
+        }
+        @media (min-width: $desktop) {
+          display: flex;
+          align-items: center;
+        }
+        .feedback__label {
+          @media (min-width: $mobile) and (max-width: $desktop - 1) {
+            display: block;
+            margin-bottom: 10px;
+            margin-left: 22px;
+          }
+          @media (min-width: $desktop) {
+            margin-right: 15px;
+          }
+        }
+
+        .feedback__input {
+          @media (min-width: $mobile) and (max-width: $desktop - 1) {
+            width: 100%;
+          }
+          @media (min-width: $desktop) {
+            flex-grow: 1;
+          }
+        }
+
+        .feedback__input--phone {
+          margin-bottom: 15px;
+          @media (min-width: $desktop) {
+            margin-bottom: 0;
+          }
+        }
+      }
+
+      .feedback__phone {
+        @media (min-width: $desktop) {
+          margin-right: 80px;
+          flex-shrink: 1.15;
+        }
+        .feedback__hidden--desktop {
+          @media (min-width: $desktop) {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
+  &__impression {
+    outline: none;
+    @media (min-width: $mobile) {
+      padding: 20px 0 27px;
+    }
+    @media (min-width: $tablet) {
+      order: -1;
+      width: 50%;
+      padding: 40px 0 35px;
+    }
+    @media (min-width: $desktop) {
+      padding: 35px 0 0 0;
+    }
+
+    .feedback__title {
+      @media (min-width: $mobile) {
+        margin-bottom: 26px !important;
+      }
+      @media (min-width: $tablet) {
+        text-align: left;
+        margin-bottom: 62px !important;
+      }
+      @media (min-width: $desktop) {
+        margin-left: 80px;
+      }
+    }
+
+    > div {
+      @include sedona_container();
+      @media (min-width: $mobile) {
+        margin-bottom: 15px;
+        &:last-of-type {
+          margin-bottom: 0;
+        }
+      }
+      @media (min-width: $tablet) {
+        margin-left: 0;
+        width: 100%;
+      }
+    }
+  }
+
+  &__sights {
+    @media (min-width: $mobile) {
+      padding: 20px 0 25px;
+    }
+    @media (min-width: $tablet) {
+      width: 100%;
+      padding: 20px 0 35px;
+    }
+    @media (min-width: $desktop) {
+      padding: 20px 0 15px;
+    }
+
+    .feedback__title {
+      @media (min-width: $mobile) {
+        margin-bottom: 15px !important;
+      }
+      @media (min-width: $tablet) {
+        width: 280px;
+        text-align: center;
+        margin-bottom: 25px !important;
+      }
+    }
+
+    .feedback__wrapper {
+      @media (min-width: $mobile) and (max-width: $desktop - 1) {
+        @include sedona_container();
+      }
+      @media (min-width: $tablet) {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 540px;
+      }
+      @media (min-width: $desktop) {
+        width: 100%;
+        justify-content: space-between;
+        flex-wrap: wrap;
+      }
+
+      > div {
+        @media (min-width: $mobile) and (max-width: $desktop - 1) {
+          margin-bottom: 25px;
+          &:last-of-type {
+            margin-bottom: 0;
+          }
+        }
+        @media (min-width: $tablet) {
+          outline: 1px black solid;
+          margin: 0 0 15px;
+        }
+        @media (min-width: $tablet) and (max-width: $desktop - 1) {
+          width: 229px;
+          &:nth-of-type(2n+1) {
+            margin-right: 60px;
+          }
+          &:nth-last-of-type(2) {
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+
+  &__emotions {
+    @media (min-width: $mobile) {
+      padding: 20px 0 51px;
+    }
+    @media (min-width: $tablet) {
+      width: 100%;
+      padding: 35px 0 58px;
+    }
+    .feedback__title {
+      @media (min-width: $mobile) {
+        margin-bottom: 20px !important;
+      }
+      @media (min-width: $tablet) {
+        margin-bottom: 60px !important;
+      }
+    }
+    /* обертка для корректного растяжения textarea по центру */
+    .feedback__textreview--container {
+      @media (min-width: $mobile) and (max-width: $tablet - 1) {
+        @include sedona_container();
+      }
+      .feedback__textreview {
+        width: 100%;
+        vertical-align: top;
+      }
+    }
+  }
+
+  .feedback__send--container {
+    @media (min-width: $mobile) and (max-width: $tablet - 1) {
+      @include sedona_container();
+    }
+    @media (min-width: $tablet) {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+    }
+    .feedback__send {
+      @extend body;
+      border: none;
+      padding: 18px 0;
+      @media (min-width: $mobile) and (max-width: $tablet - 1) {
+        margin: 0 auto !important;
+      }
+      @media (min-width: $tablet) {
+        width: 324px;
+      }
+      @media (min-width: $desktop) {
+        width: 480px;
+      }
+    }
+
+    .feedback__note {
+      font-weight: $regular;
+      font-size: 14px;
+      line-height: 26px;
+      color: rgb(51, 51, 51);
+      @media (min-width: $mobile) and (max-width: $tablet - 1) {
+        display: none;
+      }
+      @media (min-width: $tablet) {
+        display: block;
+        align-self: center;
+      }
+    }
+  }
+
+}
