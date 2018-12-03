@@ -37,7 +37,6 @@
     width: 23px;
     height: 4px;
     background: $light-blue;
-    transition: linear 0.3s;
   }
   &::before {
     transform: translate(0, 8px);
@@ -47,20 +46,20 @@
   }
 }
 
-.main-nav__close {
+.site-list__close {
   @extend .main-nav__open;
-  background: white;
+  background: $light-blue;
   border: none;
   &::before,
   &::after {
     width: 140%;
-
+    background: white;
   }
   &::before {
-    transform: translate(-4px, -1px) rotate(45deg);
+    transform: translate(-16px, 9px) rotate(45deg);
   }
   &::after {
-    transform: translate(-4px, -1px) rotate(-45deg);
+    transform: translate(-16px, 9px) rotate(-45deg);
   }
 }
 
