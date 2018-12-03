@@ -6,13 +6,22 @@
     text-align: center;
     @media (min-width: $mobile) {
       display: block;
-      background: $light-blue;
       width: 100%;
       padding: 8px 0;
     }
+    @media (max-width: $tablet - 1) {
+      background: $light-blue;
+      border-top: 1px solid rgb(154, 194, 219);
+      border-bottom: 1px solid rgb(103, 143, 168);
+    }
     @media (min-width: $tablet) {
-      background: white;
       padding: 15px 0;
+    }
+    &:first-of-type {
+      border-top: none;
+    }
+    &:last-of-type {
+      border-bottom: none;
     }
 
     .site-list__link {

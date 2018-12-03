@@ -1136,15 +1136,43 @@
       flex-wrap: nowrap;
       height: 100%; } }
 
-.main-nav__open {
+.main-nav__open, .main-nav__close {
   position: absolute;
   right: 20px;
-  bottom: 20px;
+  bottom: 26px;
   width: 23px;
-  height: 21px; }
+  height: 3px;
+  border-top: 1px solid #c0d9e8;
+  border-bottom: 1px solid #c0d9e8;
+  background: #81b3d2; }
   @media (min-width: 768px) {
-    .main-nav__open {
+    .main-nav__open, .main-nav__close {
       display: none; } }
+  .main-nav__open::before, .main-nav__close::before, .main-nav__open::after, .main-nav__close::after {
+    content: "";
+    position: absolute;
+    width: 23px;
+    height: 4px;
+    background: #81b3d2;
+    transition: linear 0.3s; }
+  .main-nav__open::before, .main-nav__close::before {
+    transform: translate(0, 8px); }
+  .main-nav__open::after, .main-nav__close::after {
+    transform: translate(0, -10px); }
+
+.main-nav__close {
+  background: white;
+  border: none; }
+  .main-nav__close::before, .main-nav__close::after {
+    width: 140%; }
+  .main-nav__close::before {
+    transform: translate(-4px, -1px) rotate(45deg); }
+  .main-nav__close::after {
+    transform: translate(-4px, -1px) rotate(-45deg); }
+
+@media (max-width: 767px) {
+  .main-nav__hidden {
+    display: none; } }
 
 /* основной цвет сайта */
 @media (min-width: 768px) {
@@ -1774,13 +1802,20 @@
   @media (min-width: 320px) {
     .site-list .site-list__item {
       display: block;
-      background: #81b3d2;
       width: 100%;
       padding: 8px 0; } }
+  @media (max-width: 767px) {
+    .site-list .site-list__item {
+      background: #81b3d2;
+      border-top: 1px solid #9ac2db;
+      border-bottom: 1px solid #678fa8; } }
   @media (min-width: 768px) {
     .site-list .site-list__item {
-      background: white;
       padding: 15px 0; } }
+  .site-list .site-list__item:first-of-type {
+    border-top: none; }
+  .site-list .site-list__item:last-of-type {
+    border-bottom: none; }
   .site-list .site-list__item .site-list__link {
     text-decoration: none; }
     @media (min-width: 320px) {
