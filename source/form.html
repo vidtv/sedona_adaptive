@@ -12,14 +12,14 @@
         <header class="page-header">
             <nav class="main-nav main-nav__hidden">
                 <ul class="main-nav__list site-list">
-                    <li class="site-list__item site-list__item--active">
+                    <li class="site-list__item">
                         <a class="site-list__link" href="index.html">Главная</a>
                         <div class="site-list__close"></div>
                     </li>
                     <li class="site-list__item">
                         <a class="site-list__link" href="photo.html">Фото и видео</a>
                     </li>
-                    <li class="site-list__item">
+                    <li class="site-list__item site-list__item--active">
                         <a class="site-list__link">Форма отзыва</a>
                     </li>
                     <li class="site-list__item">
@@ -44,18 +44,18 @@
                     <div class="feedback__name">
                         <label class="feedback__label feedback__label--name" for="feedback__input--name">Имя*:</label>
                         <input class="feedback__input feedback__input--text feedback__input--name"
-                               id="feedback__input--name" type="text" value="Петр">
+                               id="feedback__input--name" type="text" placeholder="Петр" required>
                     </div>
                     <div class="feedback__surname">
                         <label class="feedback__label feedback__label--surname"
                                for="feedback__input--surname">Фамилия*:</label>
                         <input class="feedback__input feedback__input--text feedback__input--surname"
-                               id="feedback__input--surname" type="text" value="Иванов">
+                               id="feedback__input--surname" type="text" placeholder="Иванов" required>
                     </div>
                     <div class="feedback__patronymic">
                         <label class="feedback__label feedback__label--patronymic" for="feedback__input--patronymic">Отчество:</label>
                         <input class="feedback__input feedback__input--text feedback__input--patronymic"
-                               id="feedback__input--patronymic" type="text" value="Александрович">
+                               id="feedback__input--patronymic" type="text" placeholder="Александрович">
                     </div>
                 </section>
                 <section class="feedback__contacts">
@@ -65,13 +65,13 @@
                             <label class="feedback__label feedback__label--phone" for="feedback__input--phone">
                                 <span class="feedback__hidden--desktop">Контактный </span>телефон*:</label>
                             <input class="feedback__input feedback__input--text feedback__input--phone"
-                                   id="feedback__input--phone" type="text" placeholder="Введите телефон">
+                                   id="feedback__input--phone" type="tel" placeholder="Введите телефон" required>
                         </div>
                         <div class="feedback__email">
                             <label class="feedback__label feedback__label--email" for="feedback__input--email">Электронная
                                 почта*:</label>
                             <input class="feedback__input feedback__input--text feedback__input--email"
-                                   id="feedback__input--email" type="text" placeholder="Введите e-mail">
+                                   id="feedback__input--email" type="text" placeholder="Введите e-mail" required>
                         </div>
                     </div>
                 </section>
@@ -130,7 +130,7 @@
                     </div>
                 </section>
                 <div class="feedback__send--container">
-                    <button class="button feedback__send" type="submit">Отправить отзыв</button>
+                    <button class="button feedback__send" type="submit" disabled>Отправить отзыв</button>
                     <span class="feedback__note">* - обязательные поля</span>
                 </div>
             </form>

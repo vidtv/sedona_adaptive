@@ -95,13 +95,6 @@
   }
   .reason {
     background: #eeeeee;
-    padding: 30px 0;
-    @media (min-width: $mobile) {
-      @include sedona_border();
-      &:last-of-type {
-        border: none;
-      }
-    }
     @media (min-width: $tablet) {
       width: 33.33%;
       border: none;
@@ -111,15 +104,23 @@
       padding-bottom: 67px;
     }
 
-    .reason__desc {
-      @media (min-width: $mobile) {
-        width: 260px;
+    .reason__wrapper {
+      @media (max-width: $tablet - 1) {
+        @include sedona_container();
+        @include sedona_border();
+        padding: 30px 0;
       }
-      @media (min-width: $tablet) {
-        width: 150px;
-      }
-      @media (min-width: $desktop) {
-        width: 265px;
+
+      .reason__desc {
+        @media (min-width: $mobile) {
+          width: 260px;
+        }
+        @media (min-width: $tablet) {
+          width: 150px;
+        }
+        @media (min-width: $desktop) {
+          width: 265px;
+        }
       }
     }
   }

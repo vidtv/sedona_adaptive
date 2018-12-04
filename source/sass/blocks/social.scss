@@ -18,5 +18,13 @@
     width: 46px;
     height: 48px;
     margin-right: 6px;
+
+    &:hover {
+      background-color: $light-blue-hover;
+    }
+    &:active {
+      background-color: $light-blue-active;
+      color: rgba(255,255,255,0.3);
+    }
   }
 }

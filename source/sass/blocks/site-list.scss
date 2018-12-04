@@ -4,6 +4,7 @@
   .site-list__item {
     list-style-type: none;
     text-align: center;
+    cursor: pointer;
     @media (min-width: $mobile) {
       display: block;
       width: 100%;
@@ -16,6 +17,12 @@
     }
     @media (min-width: $tablet) {
       padding: 15px 0;
+      &:hover > .site-list__link {
+        color: $light-blue;
+      }
+      &:active > .site-list__link {
+        color: rgba(0,0,0,0.3);
+      }
     }
     &:first-of-type {
       border-top: none;
@@ -53,6 +60,22 @@
   .site-list__item:nth-of-type(2) {
     @media (min-width: $tablet) {
       margin-right: 102px;
+    }
+  }
+  
+  .site-list__item--active {
+    @media (min-width: $tablet) {
+      cursor: auto;
+
+      & > .site-list__link {
+        color: rgb(118,99,87);
+      }
+      &:hover > .site-list__link {
+        color: rgb(96,78,67);
+      }
+      &:active > .site-list__link {
+        color: rgba(118,99,87,0.3);
+      }
     }
   }
 }
