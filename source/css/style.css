@@ -1687,13 +1687,18 @@
   @media (min-width: 768px) {
     .page-index > .reason:nth-of-type(1) {
       display: flex; } }
+  @media (min-width: 768px) {
+    .page-index > .reason:nth-of-type(1):before {
+      content: "";
+      padding-top: 33.3333%;
+      float: left; } }
   @media (min-width: 320px) {
     .page-index > .reason:nth-of-type(1) .reason__wrapper {
       padding: 40px 0; } }
   @media (min-width: 768px) {
     .page-index > .reason:nth-of-type(1) .reason__wrapper {
       width: 33.33%;
-      padding: 45px 0; } }
+      margin: auto 0; } }
   @media (min-width: 1200px) {
     .page-index > .reason:nth-of-type(1) .reason__wrapper {
       padding: 58px 0; } }
@@ -1711,10 +1716,60 @@
     flex-grow: 1; }
     @media (min-width: 320px) {
       .page-index > .reason:nth-of-type(1) .reason__image {
-        height: 260px; } }
+        min-height: 260px;
+        overflow: hidden; } }
     @media (min-width: 768px) {
       .page-index > .reason:nth-of-type(1) .reason__image {
-        height: inherit; } }
+        min-height: 256px;
+        height: inherit;
+        overflow: hidden; } }
+  @media (max-width: 767px) {
+    .page-index > .reason:nth-of-type(1) .reason__image:before {
+      content: "";
+      padding-top: 80%;
+      float: left; } }
+  @media (min-width: 320px) {
+    .page-index > .reason:nth-of-type(1) .reason__image--first {
+      background: url("../../img/main-city-mobile@1x.jpg") no-repeat;
+      background-size: 100%; } }
+  @media (min-width: 320px) and (min-resolution: 2dppx) {
+    .page-index > .reason:nth-of-type(1) .reason__image--first {
+      background: url("../../img/main-city-mobile@2x.jpg") no-repeat;
+      background-size: 100%; } }
+  @media (min-width: 768px) {
+    .page-index > .reason:nth-of-type(1) .reason__image--first {
+      background: url("../../img/main-city-tablet@1x.jpg") no-repeat;
+      background-size: 100%; } }
+  @media (min-width: 768px) and (min-resolution: 2dppx) {
+    .page-index > .reason:nth-of-type(1) .reason__image--first {
+      background: url("../../img/main-city-tablet@2x.jpg") no-repeat; } }
+  @media (min-width: 1200px) {
+    .page-index > .reason:nth-of-type(1) .reason__image--first {
+      background: url("../../img/main-city-desktop@1x.jpg") no-repeat; } }
+  @media (min-width: 1200px) and (min-resolution: 2dppx) {
+    .page-index > .reason:nth-of-type(1) .reason__image--first {
+      background: url("../../img/main-city-desktop@2x.jpg") no-repeat; } }
+  @media (min-width: 320px) {
+    .page-index > .reason:nth-of-type(1) .reason__image--second {
+      background: url("../../img/main-bridge-mobile@1x.jpg") no-repeat;
+      background-size: 100%; } }
+  @media (min-width: 320px) and (min-resolution: 2dppx) {
+    .page-index > .reason:nth-of-type(1) .reason__image--second {
+      background: url("../../img/main-bridge-mobile@2x.jpg") no-repeat;
+      background-size: 100%; } }
+  @media (min-width: 768px) {
+    .page-index > .reason:nth-of-type(1) .reason__image--second {
+      background: url("../../img/main-bridge-tablet@1x.jpg") no-repeat;
+      background-size: 100%; } }
+  @media (min-width: 768px) and (min-resolution: 2dppx) {
+    .page-index > .reason:nth-of-type(1) .reason__image--second {
+      background: url("../../img/main-bridge-tablet@2x.jpg") no-repeat; } }
+  @media (min-width: 1200px) {
+    .page-index > .reason:nth-of-type(1) .reason__image--second {
+      background: url("../../img/main-bridge-desktop@1x.jpg") no-repeat; } }
+  @media (min-width: 1200px) and (min-resolution: 2dppx) {
+    .page-index > .reason:nth-of-type(1) .reason__image--second {
+      background: url("../../img/main-bridge-desktop@2x.jpg") no-repeat; } }
 
 .page-index > .reason:nth-of-type(2) {
   background: #81b3d2;
@@ -1722,13 +1777,18 @@
   @media (min-width: 768px) {
     .page-index > .reason:nth-of-type(2) {
       display: flex; } }
+  @media (min-width: 768px) {
+    .page-index > .reason:nth-of-type(2):before {
+      content: "";
+      padding-top: 33.3333%;
+      float: left; } }
   @media (min-width: 320px) {
     .page-index > .reason:nth-of-type(2) .reason__wrapper {
       padding: 40px 0; } }
   @media (min-width: 768px) {
     .page-index > .reason:nth-of-type(2) .reason__wrapper {
       width: 33.33%;
-      padding: 45px 0; } }
+      margin: auto 0; } }
   @media (min-width: 1200px) {
     .page-index > .reason:nth-of-type(2) .reason__wrapper {
       padding: 58px 0; } }
@@ -1746,10 +1806,60 @@
     flex-grow: 1; }
     @media (min-width: 320px) {
       .page-index > .reason:nth-of-type(2) .reason__image {
-        height: 260px; } }
+        min-height: 260px;
+        overflow: hidden; } }
     @media (min-width: 768px) {
       .page-index > .reason:nth-of-type(2) .reason__image {
-        height: inherit; } }
+        min-height: 256px;
+        height: inherit;
+        overflow: hidden; } }
+  @media (max-width: 767px) {
+    .page-index > .reason:nth-of-type(2) .reason__image:before {
+      content: "";
+      padding-top: 80%;
+      float: left; } }
+  @media (min-width: 320px) {
+    .page-index > .reason:nth-of-type(2) .reason__image--first {
+      background: url("../../img/main-city-mobile@1x.jpg") no-repeat;
+      background-size: 100%; } }
+  @media (min-width: 320px) and (min-resolution: 2dppx) {
+    .page-index > .reason:nth-of-type(2) .reason__image--first {
+      background: url("../../img/main-city-mobile@2x.jpg") no-repeat;
+      background-size: 100%; } }
+  @media (min-width: 768px) {
+    .page-index > .reason:nth-of-type(2) .reason__image--first {
+      background: url("../../img/main-city-tablet@1x.jpg") no-repeat;
+      background-size: 100%; } }
+  @media (min-width: 768px) and (min-resolution: 2dppx) {
+    .page-index > .reason:nth-of-type(2) .reason__image--first {
+      background: url("../../img/main-city-tablet@2x.jpg") no-repeat; } }
+  @media (min-width: 1200px) {
+    .page-index > .reason:nth-of-type(2) .reason__image--first {
+      background: url("../../img/main-city-desktop@1x.jpg") no-repeat; } }
+  @media (min-width: 1200px) and (min-resolution: 2dppx) {
+    .page-index > .reason:nth-of-type(2) .reason__image--first {
+      background: url("../../img/main-city-desktop@2x.jpg") no-repeat; } }
+  @media (min-width: 320px) {
+    .page-index > .reason:nth-of-type(2) .reason__image--second {
+      background: url("../../img/main-bridge-mobile@1x.jpg") no-repeat;
+      background-size: 100%; } }
+  @media (min-width: 320px) and (min-resolution: 2dppx) {
+    .page-index > .reason:nth-of-type(2) .reason__image--second {
+      background: url("../../img/main-bridge-mobile@2x.jpg") no-repeat;
+      background-size: 100%; } }
+  @media (min-width: 768px) {
+    .page-index > .reason:nth-of-type(2) .reason__image--second {
+      background: url("../../img/main-bridge-tablet@1x.jpg") no-repeat;
+      background-size: 100%; } }
+  @media (min-width: 768px) and (min-resolution: 2dppx) {
+    .page-index > .reason:nth-of-type(2) .reason__image--second {
+      background: url("../../img/main-bridge-tablet@2x.jpg") no-repeat; } }
+  @media (min-width: 1200px) {
+    .page-index > .reason:nth-of-type(2) .reason__image--second {
+      background: url("../../img/main-bridge-desktop@1x.jpg") no-repeat; } }
+  @media (min-width: 1200px) and (min-resolution: 2dppx) {
+    .page-index > .reason:nth-of-type(2) .reason__image--second {
+      background: url("../../img/main-bridge-desktop@2x.jpg") no-repeat; } }
 
 .page-index > .reason:nth-of-type(3) {
   background: #81b3d2;
@@ -1757,13 +1867,18 @@
   @media (min-width: 768px) {
     .page-index > .reason:nth-of-type(3) {
       display: flex; } }
+  @media (min-width: 768px) {
+    .page-index > .reason:nth-of-type(3):before {
+      content: "";
+      padding-top: 33.3333%;
+      float: left; } }
   @media (min-width: 320px) {
     .page-index > .reason:nth-of-type(3) .reason__wrapper {
       padding: 40px 0; } }
   @media (min-width: 768px) {
     .page-index > .reason:nth-of-type(3) .reason__wrapper {
       width: 33.33%;
-      padding: 45px 0; } }
+      margin: auto 0; } }
   @media (min-width: 1200px) {
     .page-index > .reason:nth-of-type(3) .reason__wrapper {
       padding: 58px 0; } }
@@ -1781,10 +1896,60 @@
     flex-grow: 1; }
     @media (min-width: 320px) {
       .page-index > .reason:nth-of-type(3) .reason__image {
-        height: 260px; } }
+        min-height: 260px;
+        overflow: hidden; } }
     @media (min-width: 768px) {
       .page-index > .reason:nth-of-type(3) .reason__image {
-        height: inherit; } }
+        min-height: 256px;
+        height: inherit;
+        overflow: hidden; } }
+  @media (max-width: 767px) {
+    .page-index > .reason:nth-of-type(3) .reason__image:before {
+      content: "";
+      padding-top: 80%;
+      float: left; } }
+  @media (min-width: 320px) {
+    .page-index > .reason:nth-of-type(3) .reason__image--first {
+      background: url("../../img/main-city-mobile@1x.jpg") no-repeat;
+      background-size: 100%; } }
+  @media (min-width: 320px) and (min-resolution: 2dppx) {
+    .page-index > .reason:nth-of-type(3) .reason__image--first {
+      background: url("../../img/main-city-mobile@2x.jpg") no-repeat;
+      background-size: 100%; } }
+  @media (min-width: 768px) {
+    .page-index > .reason:nth-of-type(3) .reason__image--first {
+      background: url("../../img/main-city-tablet@1x.jpg") no-repeat;
+      background-size: 100%; } }
+  @media (min-width: 768px) and (min-resolution: 2dppx) {
+    .page-index > .reason:nth-of-type(3) .reason__image--first {
+      background: url("../../img/main-city-tablet@2x.jpg") no-repeat; } }
+  @media (min-width: 1200px) {
+    .page-index > .reason:nth-of-type(3) .reason__image--first {
+      background: url("../../img/main-city-desktop@1x.jpg") no-repeat; } }
+  @media (min-width: 1200px) and (min-resolution: 2dppx) {
+    .page-index > .reason:nth-of-type(3) .reason__image--first {
+      background: url("../../img/main-city-desktop@2x.jpg") no-repeat; } }
+  @media (min-width: 320px) {
+    .page-index > .reason:nth-of-type(3) .reason__image--second {
+      background: url("../../img/main-bridge-mobile@1x.jpg") no-repeat;
+      background-size: 100%; } }
+  @media (min-width: 320px) and (min-resolution: 2dppx) {
+    .page-index > .reason:nth-of-type(3) .reason__image--second {
+      background: url("../../img/main-bridge-mobile@2x.jpg") no-repeat;
+      background-size: 100%; } }
+  @media (min-width: 768px) {
+    .page-index > .reason:nth-of-type(3) .reason__image--second {
+      background: url("../../img/main-bridge-tablet@1x.jpg") no-repeat;
+      background-size: 100%; } }
+  @media (min-width: 768px) and (min-resolution: 2dppx) {
+    .page-index > .reason:nth-of-type(3) .reason__image--second {
+      background: url("../../img/main-bridge-tablet@2x.jpg") no-repeat; } }
+  @media (min-width: 1200px) {
+    .page-index > .reason:nth-of-type(3) .reason__image--second {
+      background: url("../../img/main-bridge-desktop@1x.jpg") no-repeat; } }
+  @media (min-width: 1200px) and (min-resolution: 2dppx) {
+    .page-index > .reason:nth-of-type(3) .reason__image--second {
+      background: url("../../img/main-bridge-desktop@2x.jpg") no-repeat; } }
 
 .reason--second {
   flex-direction: row-reverse; }
@@ -1920,7 +2085,7 @@
     /* правило для десктопов Retina */ }
     @media (min-width: 320px) {
       .sedona-preview .sedona-preview__background {
-        min-height: 400px;
+        min-height: 390px;
         background: url("../../img/text-sedona-index.svg") no-repeat 50% 70px, url("../../img/bg-intro-triangle-mobile.svg") no-repeat calc(50% + 10px) 200px, url("../../img/bg-back-mobile@1x.jpg") no-repeat 50% 0;
         background-size: 280px, auto 192px, auto 390px; } }
     @media (min-resolution: 2dppx) and (min-width: 320px) {
@@ -1957,10 +2122,12 @@
     @media (min-width: 320px) {
       .sedona-preview .sedona-preview__title {
         width: 256px;
+        margin-top: 40px;
         margin-bottom: 28px; } }
     @media (min-width: 768px) {
       .sedona-preview .sedona-preview__title {
-        width: 450px; } }
+        width: 450px;
+        margin-top: 50px; } }
   .sedona-preview .sedona-preview__reasons {
     font-family: 'PT Sans', sans-serif;
     font-weight: 400;
