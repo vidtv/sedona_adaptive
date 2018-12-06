@@ -5,11 +5,61 @@
 .sedona-preview {
   text-align: center;
   @media (min-width: $mobile) {
-    padding-top: 390px;
+    //padding-top: 435px;
     padding-bottom: 30px;
   }
   @media (min-width: $tablet) {
+    //padding-top: 75%;
     padding-bottom: 55px;
+  }
+  @media (min-width: $desktop) {
+    //padding-top: 50%;
+  }
+
+  .sedona-preview__background {
+    @media (min-width: $mobile) {
+      min-height: 400px;
+      background: url("../../img/text-sedona-index.svg") no-repeat 50% 70px,
+      url("../../img/bg-intro-triangle-mobile.svg") no-repeat calc(50% + 10px) 200px,
+      url("../../img/bg-back-mobile@1x.jpg") no-repeat 50% 0;
+      background-size: 280px, auto 192px, auto 390px;
+    }
+    /* правило для мобильников Retina */
+    @media (min-resolution: 2dppx) and (min-width: $mobile) {
+      background: url("../../img/text-sedona-index.svg") no-repeat 50% 70px,
+      url("../../img/bg-intro-triangle-mobile.svg") no-repeat calc(50% + 10px) 200px,
+      url("../../img/bg-back-mobile@2x.jpg") no-repeat 50% 0;
+      background-size: 280px, auto 192px, auto 390px;
+    }
+
+    @media (min-width: $tablet) {
+      min-height: 505px;
+      background: url("../../img/bg-intro-triangle-tablet.png") no-repeat bottom 0 left 0,
+      url("../../img/text-sedona-index.svg") no-repeat 50% 50%,
+      url("../../img/bg-back-tablet@1x.jpg") no-repeat 50% 0;
+      background-size: contain, 460px, 100%;
+    }
+    /* правило для планшетов Retina */
+    @media (min-resolution: 2dppx) and (min-width: $tablet) {
+      background: url("../../img/bg-intro-triangle-tablet.png") no-repeat bottom 0 left 0,
+      url("../../img/text-sedona-index.svg") no-repeat 50% 50%,
+      url("../../img/bg-back-tablet@2x.jpg") no-repeat 50% 0;
+      background-size: contain, 460px, 100%;
+    }
+
+    @media (min-width: $desktop) {
+      background: url("../../img/bg-intro-triangle-desktop.png") no-repeat bottom 0 left 0,
+      url("../../img/text-sedona-index.svg") no-repeat 50% 50%,
+      url("../../img/bg-back-desktop@1x.jpg") no-repeat 50% 0;
+      background-size: contain, 460px, 100%;
+    }
+    /* правило для десктопов Retina */
+    @media (min-resolution: 2dppx) and (min-width: $desktop) {
+      background: url("../../img/bg-intro-triangle-desktop.png") no-repeat bottom 0 left 0,
+      url("../../img/text-sedona-index.svg") no-repeat 50% 50%,
+      url("../../img/bg-back-desktop@2x.jpg") no-repeat 50% 0;
+      background-size: contain, 460px, 100%;
+    }
   }
 
   .sedona-preview__title {

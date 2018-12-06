@@ -38,7 +38,7 @@
 }
 
 @for $i from 1 through 3 {
-  .page-main > .reason:nth-of-type(#{$i}) {
+  .page-index > .reason:nth-of-type(#{$i}) {
     background: $light-blue;
     color: white;
     @media (min-width: $tablet) {

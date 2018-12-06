@@ -3,7 +3,7 @@
 .page-header {
   position: relative;
 
-  @media (min-width: $mobile) {
+  @media (max-width: $tablet - 1) {
     padding-bottom: 56px;
   }
 
