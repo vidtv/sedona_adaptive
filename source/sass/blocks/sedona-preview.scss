@@ -15,14 +15,14 @@
     @media (min-width: $mobile) {
       min-height: 390px;
       background: url("../../img/text-sedona-index.svg") no-repeat 50% 70px,
-      url("../../img/bg-intro-triangle-mobile.svg") no-repeat calc(50% + 10px) 200px,
+      url("../../img/bg-intro-triangle-mobile.svg") no-repeat 50% 200px,
       url("../../img/bg-back-mobile@1x.jpg") no-repeat 50% 0;
       background-size: 280px, auto 192px, auto 390px;
     }
     /* правило для мобильников Retina */
     @media (min-resolution: 2dppx) and (min-width: $mobile) {
       background: url("../../img/text-sedona-index.svg") no-repeat 50% 70px,
-      url("../../img/bg-intro-triangle-mobile.svg") no-repeat calc(50% + 10px) 200px,
+      url("../../img/bg-intro-triangle-mobile.svg") no-repeat 50% 200px,
       url("../../img/bg-back-mobile@2x.jpg") no-repeat 50% 0;
       background-size: 280px, auto 192px, auto 390px;
     }

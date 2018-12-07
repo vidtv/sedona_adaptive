@@ -1000,15 +1000,12 @@
   text-align: center; }
   @media (min-width: 320px) {
     .feedback-preview, .photos .photos__preview {
-      padding-top: 200px;
       padding-bottom: 30px; } }
   @media (min-width: 768px) {
     .feedback-preview, .photos .photos__preview {
-      padding-top: 365px;
       padding-bottom: 40px; } }
   @media (min-width: 1200px) {
     .feedback-preview, .photos .photos__preview {
-      padding-top: 415px;
       padding-bottom: 30px; } }
   .feedback-preview .feedback-preview__title, .photos .photos__preview .feedback-preview__title, .photos .photos__preview .photos__title--preview {
     line-height: 26px;
@@ -1348,6 +1345,48 @@
 
 /* основной цвет сайта */
 /* цвета при наведении и нажатии */
+.page-main .page-main__background {
+  overflow: hidden; }
+  @media (min-width: 320px) {
+    .page-main .page-main__background {
+      background: url("../../img/text-sedona.svg") no-repeat 50% 45%, url("../../img/bg-intro-triangle-mobile.svg") no-repeat 50% 100%, url("../../img/bg-back-mobile@1x.jpg") no-repeat 100% 50%;
+      background-size: 70%, 100%, 200%;
+      min-height: 158px; } }
+  @media (min-width: 320px) and (min-resolution: 2dppx) {
+    .page-main .page-main__background {
+      background: url("../../img/text-sedona.svg") no-repeat 50% 45%, url("../../img/bg-intro-triangle-mobile.svg") no-repeat 50% 100%, url("../../img/bg-back-mobile@2x.jpg") no-repeat 100% 50%;
+      background-size: 70%, 100%, 200%; } }
+  @media (min-width: 768px) {
+    .page-main .page-main__background {
+      background: url("../../img/text-sedona.svg") no-repeat 50% 45%, url("../../img/bg-intro-triangle-tablet.png") no-repeat left 0 bottom 0, url("../../img/bg-back-tablet@1x.jpg") no-repeat 100% 50%;
+      background-size: 60%, 100%, 200%;
+      min-height: 290px; } }
+  @media (min-width: 768px) and (min-resolution: 2dppx) {
+    .page-main .page-main__background {
+      background: url("../../img/text-sedona.svg") no-repeat 50% 45%, url("../../img/bg-intro-triangle-tablet.png") no-repeat left 0 bottom 0, url("../../img/bg-back-tablet@2x.jpg") no-repeat 100% 50%;
+      background-size: 60%, 100%, 200%; } }
+  @media (min-width: 1200px) {
+    .page-main .page-main__background {
+      background: url("../../img/text-sedona.svg") no-repeat 50% 45%, url("../../img/bg-intro-triangle-desktop.png") no-repeat left 0 bottom 0, url("../../img/bg-back-desktop@1x.jpg") no-repeat 50% 50%;
+      background-size: 38%, 100%, 200%;
+      min-height: 300px; } }
+  @media (min-width: 1200px) and (min-resolution: 2dppx) {
+    .page-main .page-main__background {
+      background: url("../../img/text-sedona.svg") no-repeat 50% 45%, url("../../img/bg-intro-triangle-desktop.png") no-repeat left 0 bottom 0, url("../../img/bg-back-desktop@2x.jpg") no-repeat 50% 50%;
+      background-size: 38%, 100%, 200%; } }
+  .page-main .page-main__background:before {
+    content: "";
+    float: left;
+    padding-top: 50%; }
+    @media (min-width: 768px) {
+      .page-main .page-main__background:before {
+        padding-top: 38%; } }
+    @media (min-width: 1200px) {
+      .page-main .page-main__background:before {
+        padding-top: 25%; } }
+
+/* основной цвет сайта */
+/* цвета при наведении и нажатии */
 .photos .photos__preview {
   text-align: center; }
   .photos .photos__preview .photos__title--preview {
@@ -1683,7 +1722,8 @@
 
 .page-index > .reason:nth-of-type(1) {
   background: #81b3d2;
-  color: white; }
+  color: white;
+  /* распорка для тянущейся высоты блока */ }
   @media (min-width: 768px) {
     .page-index > .reason:nth-of-type(1) {
       display: flex; } }
@@ -1742,13 +1782,16 @@
       background-size: 100%; } }
   @media (min-width: 768px) and (min-resolution: 2dppx) {
     .page-index > .reason:nth-of-type(1) .reason__image--first {
-      background: url("../../img/main-city-tablet@2x.jpg") no-repeat; } }
+      background: url("../../img/main-city-tablet@2x.jpg") no-repeat;
+      background-size: 100%; } }
   @media (min-width: 1200px) {
     .page-index > .reason:nth-of-type(1) .reason__image--first {
-      background: url("../../img/main-city-desktop@1x.jpg") no-repeat; } }
+      background: url("../../img/main-city-desktop@1x.jpg") no-repeat;
+      background-size: 100%; } }
   @media (min-width: 1200px) and (min-resolution: 2dppx) {
     .page-index > .reason:nth-of-type(1) .reason__image--first {
-      background: url("../../img/main-city-desktop@2x.jpg") no-repeat; } }
+      background: url("../../img/main-city-desktop@2x.jpg") no-repeat;
+      background-size: 100%; } }
   @media (min-width: 320px) {
     .page-index > .reason:nth-of-type(1) .reason__image--second {
       background: url("../../img/main-bridge-mobile@1x.jpg") no-repeat;
@@ -1773,7 +1816,8 @@
 
 .page-index > .reason:nth-of-type(2) {
   background: #81b3d2;
-  color: white; }
+  color: white;
+  /* распорка для тянущейся высоты блока */ }
   @media (min-width: 768px) {
     .page-index > .reason:nth-of-type(2) {
       display: flex; } }
@@ -1832,13 +1876,16 @@
       background-size: 100%; } }
   @media (min-width: 768px) and (min-resolution: 2dppx) {
     .page-index > .reason:nth-of-type(2) .reason__image--first {
-      background: url("../../img/main-city-tablet@2x.jpg") no-repeat; } }
+      background: url("../../img/main-city-tablet@2x.jpg") no-repeat;
+      background-size: 100%; } }
   @media (min-width: 1200px) {
     .page-index > .reason:nth-of-type(2) .reason__image--first {
-      background: url("../../img/main-city-desktop@1x.jpg") no-repeat; } }
+      background: url("../../img/main-city-desktop@1x.jpg") no-repeat;
+      background-size: 100%; } }
   @media (min-width: 1200px) and (min-resolution: 2dppx) {
     .page-index > .reason:nth-of-type(2) .reason__image--first {
-      background: url("../../img/main-city-desktop@2x.jpg") no-repeat; } }
+      background: url("../../img/main-city-desktop@2x.jpg") no-repeat;
+      background-size: 100%; } }
   @media (min-width: 320px) {
     .page-index > .reason:nth-of-type(2) .reason__image--second {
       background: url("../../img/main-bridge-mobile@1x.jpg") no-repeat;
@@ -1863,7 +1910,8 @@
 
 .page-index > .reason:nth-of-type(3) {
   background: #81b3d2;
-  color: white; }
+  color: white;
+  /* распорка для тянущейся высоты блока */ }
   @media (min-width: 768px) {
     .page-index > .reason:nth-of-type(3) {
       display: flex; } }
@@ -1922,13 +1970,16 @@
       background-size: 100%; } }
   @media (min-width: 768px) and (min-resolution: 2dppx) {
     .page-index > .reason:nth-of-type(3) .reason__image--first {
-      background: url("../../img/main-city-tablet@2x.jpg") no-repeat; } }
+      background: url("../../img/main-city-tablet@2x.jpg") no-repeat;
+      background-size: 100%; } }
   @media (min-width: 1200px) {
     .page-index > .reason:nth-of-type(3) .reason__image--first {
-      background: url("../../img/main-city-desktop@1x.jpg") no-repeat; } }
+      background: url("../../img/main-city-desktop@1x.jpg") no-repeat;
+      background-size: 100%; } }
   @media (min-width: 1200px) and (min-resolution: 2dppx) {
     .page-index > .reason:nth-of-type(3) .reason__image--first {
-      background: url("../../img/main-city-desktop@2x.jpg") no-repeat; } }
+      background: url("../../img/main-city-desktop@2x.jpg") no-repeat;
+      background-size: 100%; } }
   @media (min-width: 320px) {
     .page-index > .reason:nth-of-type(3) .reason__image--second {
       background: url("../../img/main-bridge-mobile@1x.jpg") no-repeat;
@@ -2086,11 +2137,11 @@
     @media (min-width: 320px) {
       .sedona-preview .sedona-preview__background {
         min-height: 390px;
-        background: url("../../img/text-sedona-index.svg") no-repeat 50% 70px, url("../../img/bg-intro-triangle-mobile.svg") no-repeat calc(50% + 10px) 200px, url("../../img/bg-back-mobile@1x.jpg") no-repeat 50% 0;
+        background: url("../../img/text-sedona-index.svg") no-repeat 50% 70px, url("../../img/bg-intro-triangle-mobile.svg") no-repeat 50% 200px, url("../../img/bg-back-mobile@1x.jpg") no-repeat 50% 0;
         background-size: 280px, auto 192px, auto 390px; } }
     @media (min-resolution: 2dppx) and (min-width: 320px) {
       .sedona-preview .sedona-preview__background {
-        background: url("../../img/text-sedona-index.svg") no-repeat 50% 70px, url("../../img/bg-intro-triangle-mobile.svg") no-repeat calc(50% + 10px) 200px, url("../../img/bg-back-mobile@2x.jpg") no-repeat 50% 0;
+        background: url("../../img/text-sedona-index.svg") no-repeat 50% 70px, url("../../img/bg-intro-triangle-mobile.svg") no-repeat 50% 200px, url("../../img/bg-back-mobile@2x.jpg") no-repeat 50% 0;
         background-size: 280px, auto 192px, auto 390px; } }
     @media (min-width: 768px) {
       .sedona-preview .sedona-preview__background {
