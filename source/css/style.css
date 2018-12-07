@@ -1367,12 +1367,12 @@
       background-size: 60%, 100%, 200%; } }
   @media (min-width: 1200px) {
     .page-main .page-main__background {
-      background: url("../../img/text-sedona.svg") no-repeat 50% 45%, url("../../img/bg-intro-triangle-desktop.png") no-repeat left 0 bottom 0, url("../../img/bg-back-desktop@1x.jpg") no-repeat 50% 50%;
+      background: url("../../img/text-sedona.svg") no-repeat 50% 45%, url("../../img/bg-intro-triangle-desktop.png") no-repeat left 0 bottom -1px, url("../../img/bg-back-desktop@1x.jpg") no-repeat 50% 50%;
       background-size: 38%, 100%, 200%;
       min-height: 300px; } }
   @media (min-width: 1200px) and (min-resolution: 2dppx) {
     .page-main .page-main__background {
-      background: url("../../img/text-sedona.svg") no-repeat 50% 45%, url("../../img/bg-intro-triangle-desktop.png") no-repeat left 0 bottom 0, url("../../img/bg-back-desktop@2x.jpg") no-repeat 50% 50%;
+      background: url("../../img/text-sedona.svg") no-repeat 50% 45%, url("../../img/bg-intro-triangle-desktop.png") no-repeat left 0 bottom -1px, url("../../img/bg-back-desktop@2x.jpg") no-repeat 50% 50%;
       background-size: 38%, 100%, 200%; } }
   .page-main .page-main__background:before {
     content: "";
@@ -1393,10 +1393,15 @@
     line-height: 26px; }
     @media (min-width: 320px) {
       .photos .photos__preview .photos__title--preview {
-        font-size: 18px; } }
+        font-size: 18px;
+        margin-top: 40px; } }
     @media (min-width: 768px) {
       .photos .photos__preview .photos__title--preview {
-        font-size: 30px; } }
+        font-size: 30px;
+        margin-top: 70px; } }
+    @media (min-width: 1200px) {
+      .photos .photos__preview .photos__title--preview {
+        margin-top: 110px; } }
   @media (min-width: 768px) {
     .photos .photos__preview .photos__desc--preview {
       padding-bottom: 60px; } }
@@ -1431,13 +1436,8 @@
     .photos .photos__gallery {
       width: calc(100% - 240px); } }
 
-@media (min-width: 1200px) {
-  .photos .photos__gallery {
-    width: 1200px; } }
-
 .photos .photos__gallery .photos__item {
-  margin: 0;
-  outline: 1px black solid; }
+  margin: 0; }
   @media (min-width: 320px) {
     .photos .photos__gallery .photos__item {
       padding: 22px 0; } }
@@ -1474,13 +1474,40 @@
     background-color: aquamarine; }
     @media (min-width: 320px) {
       .photos .photos__gallery .photos__item .photos__pic {
-        height: 280px; } }
+        min-height: 260px;
+        overflow: hidden; } }
     @media (min-width: 768px) {
       .photos .photos__gallery .photos__item .photos__pic {
         margin: 0;
-        height: 267px; } }
-  .photos .photos__gallery .photos__item .photos__pic--image {
-    width: 100%; }
+        min-height: 267px; } }
+    @media (min-width: 1200px) {
+      .photos .photos__gallery .photos__item .photos__pic {
+        min-height: 187px; } }
+    @media (min-width: 320px) {
+      .photos .photos__gallery .photos__item .photos__pic:before {
+        content: "";
+        float: left;
+        padding-top: 50%; } }
+    @media (min-width: 768px) {
+      .photos .photos__gallery .photos__item .photos__pic:before {
+        padding-top: 35%; } }
+    @media (min-width: 1200px) {
+      .photos .photos__gallery .photos__item .photos__pic:before {
+        padding-top: 22.25%; } }
+    .photos .photos__gallery .photos__item .photos__pic .photos__pic--image {
+      width: 100%;
+      vertical-align: top; }
+      @media (min-width: 320px) {
+        .photos .photos__gallery .photos__item .photos__pic .photos__pic--image:before {
+          content: "";
+          float: left;
+          padding-top: 50%; } }
+      @media (min-width: 768px) {
+        .photos .photos__gallery .photos__item .photos__pic .photos__pic--image:before {
+          padding-top: 35%; } }
+      @media (min-width: 1200px) {
+        .photos .photos__gallery .photos__item .photos__pic .photos__pic--image:before {
+          padding-top: 22.25%; } }
   @media (min-width: 320px) {
     .photos .photos__gallery .photos__item .photos__info {
       color: black;
@@ -1521,10 +1548,6 @@
 @media (min-width: 768px) {
   .photos .photos__gallery .photos__item--first {
     width: 100%; } }
-
-@media (min-width: 768px) {
-  .photos .photos__gallery .photos__item--first .photos__pic {
-    height: 400px; } }
 
 /* основной цвет сайта */
 /* цвета при наведении и нажатии */
@@ -2315,25 +2338,37 @@
       margin-bottom: 75px; } }
   .video .video__player {
     position: relative;
-    outline: 1px red solid; }
+    background-size: 100%; }
     @media (min-width: 320px) {
       .video .video__player {
-        width: 100%;
-        height: 201px; } }
+        width: 280px;
+        height: 201px;
+        margin: 0 auto;
+        background: url("../../img/video-mobile@1x.jpg") no-repeat;
+        background-size: inherit; } }
+    @media (min-resolution: 2dppx) and (min-width: 320px) {
+      .video .video__player {
+        background: url("../../img/video-mobile@2x.jpg") no-repeat;
+        background-size: 100%; } }
     @media (min-width: 768px) {
       .video .video__player {
-        margin: 0 auto;
-        max-width: 800px;
-        height: 500px; } }
-  @media (min-width: 768px) and (min-width: 320px) {
-    .video .video__player {
-      width: calc(100% - 40px); } }
-  @media (min-width: 768px) and (min-width: 768px) {
-    .video .video__player {
-      width: calc(100% - 120px); } }
-  @media (min-width: 768px) and (min-width: 1200px) {
-    .video .video__player {
-      width: calc(100% - 240px); } }
+        width: 648px;
+        height: 500px;
+        background: url("../../img/video-tablet@1x.jpg") no-repeat;
+        background-size: 100%; } }
+    @media (min-resolution: 2dppx) and (min-width: 768px) {
+      .video .video__player {
+        background: url("../../img/video-tablet@2x.jpg") no-repeat;
+        background-size: 100%; } }
+    @media (min-width: 1200px) {
+      .video .video__player {
+        width: 800px;
+        background: url("../../img/video-tablet@1x.jpg") no-repeat;
+        background-size: 100%; } }
+    @media (min-resolution: 2dppx) and (min-width: 1200px) {
+      .video .video__player {
+        background: url("../../img/video-desktop@2x.jpg") no-repeat;
+        background-size: 100%; } }
     .video .video__player .video__controls {
       margin: 0 auto;
       position: absolute;

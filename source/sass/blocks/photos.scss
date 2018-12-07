@@ -9,9 +9,14 @@
       @extend .feedback-preview__title;
       @media (min-width: $mobile) {
         font-size: 18px;
+        margin-top: 40px;
       }
       @media (min-width: $tablet) {
         font-size: 30px;
+        margin-top: 70px;
+      }
+      @media (min-width: $desktop) {
+        margin-top: 110px;
       }
     }
     .photos__desc--preview {
@@ -38,12 +43,8 @@
       display: flex;
       flex-wrap: wrap;
     }
-    @media (min-width: $desktop) {
-      width: $desktop;
-    }
     .photos__item {
       margin: 0;
-      outline: 1px black solid;
       @media (min-width: $mobile) {
         padding: 22px 0;
       }
@@ -71,16 +72,47 @@
       .photos__pic {
         background-color: aquamarine;
         @media (min-width: $mobile) {
-          height: 280px;
+          min-height: 260px;
+          overflow: hidden;
         }
         @media (min-width: $tablet) {
           margin: 0;
-          height: 267px;
+          min-height: 267px;
         }
-      }
+        @media (min-width: $desktop) {
+          min-height: 187px;
+        }
+        &:before {
+          @media (min-width: $mobile) {
+            content: "";
+            float: left;
+            padding-top: 50%;
+          }
+          @media (min-width: $tablet) {
+            padding-top: 35%;
+          }
+          @media (min-width: $desktop) {
+            padding-top: 22.25%;
+          }
+        }
 
-      .photos__pic--image {
-        width: 100%;
+        .photos__pic--image {
+          width: 100%;
+          vertical-align: top;
+          &:before {
+            @media (min-width: $mobile) {
+              content: "";
+              float: left;
+              padding-top: 50%;
+            }
+            @media (min-width: $tablet) {
+              padding-top: 35%;
+            }
+            @media (min-width: $desktop) {
+              padding-top: 22.25%;
+            }
+          }
+        }
       }
 
       .photos__info {
@@ -130,11 +162,6 @@
     .photos__item--first {
       @media (min-width: $tablet) {
         width: 100%;
-      }
-      .photos__pic {
-        @media (min-width: $tablet) {
-          height: 400px;
-        }
       }
     }
   }

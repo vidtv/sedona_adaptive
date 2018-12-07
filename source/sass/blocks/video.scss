@@ -35,15 +35,36 @@
 
   .video__player {
     position: relative;
-    outline: 1px red solid;
+    background-size: 100%;
     @media (min-width: $mobile) {
-      width: 100%;
+      width: 280px;
       height: 201px;
+      margin: 0 auto;
+      background: url("../../img/video-mobile@1x.jpg") no-repeat;
+      background-size: inherit;
+    }
+    @media (min-resolution: 2dppx) and (min-width: $mobile) {
+      background: url("../../img/video-mobile@2x.jpg") no-repeat;
+      background-size: 100%;
     }
     @media (min-width: $tablet) {
-      @include sedona_container();
-      max-width: 800px;
+      width: 648px;
       height: 500px;
+      background: url("../../img/video-tablet@1x.jpg") no-repeat;
+      background-size: 100%;
+    }
+    @media (min-resolution: 2dppx) and (min-width: $tablet) {
+      background: url("../../img/video-tablet@2x.jpg") no-repeat;
+      background-size: 100%;
+    }
+    @media (min-width: $desktop) {
+      width: 800px;
+      background: url("../../img/video-tablet@1x.jpg") no-repeat;
+      background-size: 100%;
+    }
+    @media (min-resolution: 2dppx) and (min-width: $desktop) {
+      background: url("../../img/video-desktop@2x.jpg") no-repeat;
+      background-size: 100%;
     }
     .video__controls {
       @include sedona_container();
