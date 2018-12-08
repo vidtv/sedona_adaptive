@@ -19,9 +19,6 @@
     @media (min-width: $mobile) and (max-width: $tablet - 1) {
       @include sedona_border();
     }
-    @media (min-width: $tablet) {
-      outline: 1px red solid;
-    }
   }
 
   .feedback__title {
@@ -71,17 +68,24 @@
 
   .feedback__checkbox,
   .feedback__radio {
-    @media (min-width: $mobile) {
-      margin: 0 24px 0 0;
-    }
+    margin: 0 65px 0 0;
   }
 
   .feedback__label--radio,
   .feedback__label--checkbox {
+    position: absolute;
     text-transform: none;
     font-weight: $bold;
     font-size: 18px;
     line-height: 26px;
+    &:before {
+      position: absolute;
+      top: -15px;
+      left: -78px;
+      content: "";
+      width: 56px;
+      height: 56px;
+    }
   }
 
   &__author {
@@ -198,18 +202,6 @@
         }
       }
 
-      .feedback__phone {
-        @media (min-width: $desktop) {
-          margin-right: 80px;
-          flex-shrink: 1.15;
-        }
-        .feedback__hidden--desktop {
-          @media (min-width: $desktop) {
-            display: none;
-          }
-        }
-      }
-
       .feedback__phone,
       .feedback__email {
         position: relative;
@@ -220,7 +212,7 @@
           right: 0;
           width: 59px;
           height: 59px;
-          background-color: rgb(230,230,230);
+          background: rgb(230,230,230) no-repeat 50% 50%;
         }
         @media (max-width: $desktop - 1) {
           &:after {
@@ -228,13 +220,32 @@
           }
         }
       }
+
+      .feedback__phone {
+        @media (min-width: $desktop) {
+          margin-right: 80px;
+          flex-shrink: 1.15;
+        }
+        &:after {
+          background-image: url("../../img/icon-phone.svg");
+        }
+        .feedback__hidden--desktop {
+          @media (min-width: $desktop) {
+            display: none;
+          }
+        }
+      }
+
+      .feedback__email:after {
+        background-image: url("../../img/icon-mail.svg");
+      }
     }
   }
 
   &__impression {
     outline: none;
     @media (min-width: $mobile) {
-      padding: 20px 0 27px;
+      padding: 20px 0 50px;
     }
     @media (min-width: $tablet) {
       order: -1;
@@ -247,7 +258,7 @@
 
     .feedback__title {
       @media (min-width: $mobile) {
-        margin-bottom: 26px !important;
+        margin-bottom: 40px !important;
       }
       @media (min-width: $tablet) {
         text-align: left;
@@ -261,21 +272,32 @@
     > div {
       @include sedona_container();
       @media (min-width: $mobile) {
-        margin-bottom: 15px;
+        margin-bottom: 52px;
         &:last-of-type {
           margin-bottom: 0;
         }
       }
       @media (min-width: $tablet) {
+        margin-bottom: 57px;
+      }
+      @media (min-width: $tablet) {
         margin-left: 0;
         width: 100%;
+      }
+
+      .feedback__label--radio:before {
+        background: url("../../img/circle.svg");
+      }
+
+      .feedback__radio:checked + .feedback__label--radio:before {
+        background: url("../../img/circle-black.svg") no-repeat 50% 50%, url("../../img/circle.svg");
       }
     }
   }
 
   &__sights {
     @media (min-width: $mobile) {
-      padding: 20px 0 25px;
+      padding: 20px 0 48px;
     }
     @media (min-width: $tablet) {
       width: 100%;
@@ -287,7 +309,8 @@
 
     .feedback__title {
       @media (min-width: $mobile) {
-        margin-bottom: 15px !important;
+        width: 250px;
+        margin-bottom: 36px !important;
       }
       @media (min-width: $tablet) {
         width: 280px;
@@ -305,6 +328,7 @@
         flex-wrap: wrap;
         justify-content: center;
         width: 540px;
+        padding: 15px 0;
       }
       @media (min-width: $desktop) {
         width: 100%;
@@ -314,14 +338,13 @@
 
       > div {
         @media (min-width: $mobile) and (max-width: $desktop - 1) {
-          margin-bottom: 25px;
+          margin-bottom: 63px;
           &:last-of-type {
             margin-bottom: 0;
           }
         }
         @media (min-width: $tablet) {
-          outline: 1px black solid;
-          margin: 0 0 15px;
+          margin: 0 0 67px;
         }
         @media (min-width: $tablet) and (max-width: $desktop - 1) {
           width: 229px;
@@ -331,6 +354,18 @@
           &:nth-last-of-type(2) {
             margin-bottom: 0;
           }
+        }
+        @media (min-width: $desktop) {
+          min-width: 200px;
+          margin-bottom: 0;
+        }
+
+        .feedback__label--checkbox:before {
+          background: url("../../img/rect.svg");
+        }
+
+        .feedback__checkbox:checked + .feedback__label--checkbox:before {
+          background: url("../../img/icon-tick.svg") no-repeat 50% 50%, url("../../img/rect.svg");
         }
       }
     }
@@ -389,10 +424,7 @@
   &__sights:before,
   &__sights:after {
     @media (min-width: $tablet) {
-      bottom: 150px;
-    }
-    @media (min-width: $desktop) {
-      bottom: 105px;
+      top: 45px;
     }
   }
 

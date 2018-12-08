@@ -13,7 +13,7 @@
   }
   .social__item {
     cursor: pointer;
-    background: $light-blue;
+    background: $light-blue no-repeat 50% 50%;
     list-style-type: none;
     width: 46px;
     height: 48px;
@@ -26,5 +26,15 @@
       background-color: $light-blue-active;
       color: rgba(255,255,255,0.3);
     }
+  }
+
+  .social__item--twitter {
+    background-image: url("../../img/icon-twitter.svg");
+  }
+  .social__item--facebook {
+    background-image: url("../../img/icon-facebook.svg");
+  }
+  .social__item--youtube {
+    background-image: url("../../img/icon-youtube.svg");
   }
 }
