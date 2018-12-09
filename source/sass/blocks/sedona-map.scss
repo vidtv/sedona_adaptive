@@ -1,5 +1,8 @@
 .sedona-map {
   display: block;
   height: 350px;
-  background: lightgreen;
+  @media (min-width: $desktop) {
+    width: $desktop;
+    margin: 0 auto;
+  }
 }

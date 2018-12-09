@@ -2,6 +2,9 @@
 "../mixins";
 
 .features {
+  @media (max-width: $tablet - 1) {
+    @include sedona_container();
+  }
   @media (min-width: $tablet) {
     display: flex;
   }
@@ -56,6 +59,7 @@
 
   .features__desc {
     @include sedona_desc();
+    position: relative;
     @media (min-width: $mobile) {
       width: 210px;
       margin-left: 0;
@@ -67,5 +71,41 @@
     @media (min-width: $desktop) {
       width: 285px;
     }
+
+    &:before {
+      position: absolute;
+      //outline: 1px blue solid;
+      @media (min-width: $mobile) {
+        content: "";
+        top: -55px;
+        left: -50px;
+        width: 40px;
+        height: 40px;
+      }
+      @media (min-width: $tablet) {
+        top: -150px;
+        left: 43px;
+        width: 76px;
+        height: 76px;
+      }
+      @media (min-width: $desktop) {
+        left: 104px;
+      }
+    }
+  }
+
+  .features__desc--house:before {
+    background: url("../../img/icon-house.svg") no-repeat 50% 50%;
+    background-size: 100%;
+  }
+
+  .features__desc--burger:before {
+    background: url("../../img/icon-burger.svg") no-repeat 50% 50%;
+    background-size: 100%;
+  }
+
+  .features__desc--souvenir:before {
+    background: url("../../img/icon-gift.svg") no-repeat 50% 50%;
+    background-size: 85%;
   }
 }

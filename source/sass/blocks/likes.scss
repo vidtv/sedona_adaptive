@@ -7,7 +7,12 @@
     width: 22px;
     height: 21px;
     margin-right: 15px;
-    outline: 1px solid yellow;
+    @media (min-width: $mobile) {
+       background: url("../../img/like-icon-mobile.png");
+    }
+    @media (min-width: $desktop) {
+      background: url("../../img/like-icon-desktop.png");
+    }
   }
 
   .likes__number {

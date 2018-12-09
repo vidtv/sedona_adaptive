@@ -6,4 +6,15 @@
   font-size: 21px;
   line-height: 26px;
   cursor: pointer;
+  &:hover {
+    background-color: $light-blue-hover;
+  }
+  &:active {
+    background-color: $light-blue-active;
+    color: rgba(255,255,255,0.3);
+  }
+  &:disabled {
+    background-color: rgb(229,229,229);
+    cursor: inherit;
+  }
 }

@@ -19,11 +19,52 @@
 .main-nav__open {
   position: absolute;
   right: 20px;
-  bottom: 20px;
+  bottom: 26px;
   width: 23px;
-  height: 21px;
+  height: 3px;
+  border-top: 1px solid rgb(192, 217, 232);
+  border-bottom: 1px solid rgb(192, 217, 232);
+  background: $light-blue;
 
   @media (min-width: $tablet) {
+    display: none;
+  }
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    width: 23px;
+    height: 4px;
+    background: $light-blue;
+  }
+  &::before {
+    transform: translate(0, 8px);
+  }
+  &::after {
+    transform: translate(0, -10px);
+  }
+}
+
+.site-list__close {
+  @extend .main-nav__open;
+  background: $light-blue;
+  border: none;
+  &::before,
+  &::after {
+    width: 140%;
+    background: white;
+  }
+  &::before {
+    transform: translate(-16px, 9px) rotate(45deg);
+  }
+  &::after {
+    transform: translate(-16px, 9px) rotate(-45deg);
+  }
+}
+
+.main-nav__hidden {
+  @media (max-width: $tablet - 1) {
     display: none;
   }
 }

@@ -1,0 +1,58 @@
+@import "../variables";
+
+.page-main {
+  .page-main__background {
+    overflow: hidden;
+    @media (min-width: $mobile) {
+      background: url("../../img/text-sedona.svg") no-repeat 50% 45%,
+        url("../../img/bg-intro-triangle-mobile.svg") no-repeat 50% 100%,
+        url("../../img/bg-back-mobile@1x.jpg") no-repeat 100% 50%;
+      background-size: 70%, 100%, 200%;
+      min-height: 158px;
+    }
+    @media (min-width: $mobile) and (min-resolution: 2dppx) {
+      background: url("../../img/text-sedona.svg") no-repeat 50% 45%,
+        url("../../img/bg-intro-triangle-mobile.svg") no-repeat 50% 100%,
+        url("../../img/bg-back-mobile@2x.jpg") no-repeat 100% 50%;
+      background-size: 70%, 100%, 200%;
+    }
+    @media (min-width: $tablet) {
+      background: url("../../img/text-sedona.svg") no-repeat 50% 45%,
+        url("../../img/bg-intro-triangle-tablet.png") no-repeat left 0 bottom 0,
+        url("../../img/bg-back-tablet@1x.jpg") no-repeat 100% 50%;
+      background-size: 60%, 100%, 200%;
+      min-height: 290px;
+    }
+    @media (min-width: $tablet) and (min-resolution: 2dppx) {
+      background: url("../../img/text-sedona.svg") no-repeat 50% 45%,
+        url("../../img/bg-intro-triangle-tablet.png") no-repeat left 0 bottom 0,
+        url("../../img/bg-back-tablet@2x.jpg") no-repeat 100% 50%;
+      background-size: 60%, 100%, 200%;
+    }
+    @media (min-width: $desktop) {
+      background: url("../../img/text-sedona.svg") no-repeat 50% 45%,
+        url("../../img/bg-intro-triangle-desktop.png") no-repeat left 0 bottom -1px,
+        url("../../img/bg-back-desktop@1x.jpg") no-repeat 50% 50%;
+      background-size: 38%, 100%, 200%;
+      min-height: 300px;
+    }
+    @media (min-width: $desktop) and (min-resolution: 2dppx) {
+      background: url("../../img/text-sedona.svg") no-repeat 50% 45%,
+        url("../../img/bg-intro-triangle-desktop.png") no-repeat left 0 bottom -1px,
+        url("../../img/bg-back-desktop@2x.jpg") no-repeat 50% 50%;
+      background-size: 38%, 100%, 200%;
+    }
+
+    &:before {
+      content: "";
+      float: left;
+      padding-top: 50%;
+      @media (min-width: $tablet) {
+        padding-top: 38%;
+      }
+      @media (min-width: $desktop) {
+        padding-top: 25%;
+      }
+    }
+  }
+}

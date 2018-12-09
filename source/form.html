@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width; initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Make a feedback</title>
         <link href="css/style.css" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=PT+Sans:700" rel="stylesheet">
@@ -10,16 +10,16 @@
     </head>
     <body>
         <header class="page-header">
-            <nav class="main-nav">
+            <nav class="main-nav main-nav__hidden">
                 <ul class="main-nav__list site-list">
-                    <li class="site-list__item site-list__item--active">
+                    <li class="site-list__item">
                         <a class="site-list__link" href="index.html">Главная</a>
-                        <button class="site-list__close"></button>
+                        <div class="site-list__close"></div>
                     </li>
                     <li class="site-list__item">
                         <a class="site-list__link" href="photo.html">Фото и видео</a>
                     </li>
-                    <li class="site-list__item">
+                    <li class="site-list__item site-list__item--active">
                         <a class="site-list__link">Форма отзыва</a>
                     </li>
                     <li class="site-list__item">
@@ -27,35 +27,40 @@
                     </li>
                 </ul>
             </nav>
-            <a class="page-header__logo">
-                <img class="page-header__logo-image" src="main.svg" width="102" height="83" alt="Sedona">
+            <a class="page-header__logo" href="index.html">
+                <picture>
+                    <source media="(min-width: 1200px)" srcset="img/logo-sedona-desktop.svg">
+                    <source media="(min-width: 768px)" srcset="img/logo-sedona-tablet.svg">
+                    <img class="page-header__logo-image" src="img/logo-sedona-mobile.svg" width="102" height="83" alt="Sedona">
+                </picture>
             </a>
-            <button class="main-nav__open"></button>
+            <div class="main-nav__open"></div>
         </header>
         <main class="page-main">
             <header class="feedback-preview">
+                <div class="page-main__background"></div>
                 <b class="feedback__title feedback-preview__title">Оставьте свой отзыв</b>
                 <p class="feedback-preview__asking">Помогите нашим отелям стать лучше! оставьте отзыв о них,
                     а также о посещенных вами достопримечательностях</p>
             </header>
-            <form class="feedback" action="https://echo.htmlacademy.ru">
+            <form class="feedback" action="#" method="post">
                 <section class="feedback__author">
                     <b class="feedback__title">Представьтесь</b>
                     <div class="feedback__name">
                         <label class="feedback__label feedback__label--name" for="feedback__input--name">Имя*:</label>
                         <input class="feedback__input feedback__input--text feedback__input--name"
-                               id="feedback__input--name" type="text" value="Петр">
+                               id="feedback__input--name" type="text" placeholder="Петр" required>
                     </div>
                     <div class="feedback__surname">
                         <label class="feedback__label feedback__label--surname"
                                for="feedback__input--surname">Фамилия*:</label>
                         <input class="feedback__input feedback__input--text feedback__input--surname"
-                               id="feedback__input--surname" type="text" value="Иванов">
+                               id="feedback__input--surname" type="text" placeholder="Иванов" required>
                     </div>
                     <div class="feedback__patronymic">
                         <label class="feedback__label feedback__label--patronymic" for="feedback__input--patronymic">Отчество:</label>
                         <input class="feedback__input feedback__input--text feedback__input--patronymic"
-                               id="feedback__input--patronymic" type="text" value="Александрович">
+                               id="feedback__input--patronymic" type="text" placeholder="Александрович">
                     </div>
                 </section>
                 <section class="feedback__contacts">
@@ -65,13 +70,13 @@
                             <label class="feedback__label feedback__label--phone" for="feedback__input--phone">
                                 <span class="feedback__hidden--desktop">Контактный </span>телефон*:</label>
                             <input class="feedback__input feedback__input--text feedback__input--phone"
-                                   id="feedback__input--phone" type="text" placeholder="Введите телефон">
+                                   id="feedback__input--phone" type="text" placeholder="Введите телефон" required>
                         </div>
                         <div class="feedback__email">
                             <label class="feedback__label feedback__label--email" for="feedback__input--email">Электронная
                                 почта*:</label>
                             <input class="feedback__input feedback__input--text feedback__input--email"
-                                   id="feedback__input--email" type="text" placeholder="Введите e-mail">
+                                   id="feedback__input--email" type="text" placeholder="Введите e-mail" required>
                         </div>
                     </div>
                 </section>
@@ -86,12 +91,12 @@
                     <div class="feedback__negative">
                         <input class="feedback__radio feedback__radio" id="feedback__radio--negative" type="radio" name="impression">
                         <label class="feedback__label feedback__label--radio feedback__label--negative"
-                               for="feedback__radio--negative">Скорее негативное</label>
+                               for="feedback__radio--negative">Скорее отрицательное</label>
                     </div>
                     <div class="feedback__dunno">
                         <input class="feedback__radio feedback__radio--dunno" id="feedback__radio--dunno" type="radio" name="impression">
                         <label class="feedback__label feedback__label--radio feedback__label--dunno"
-                               for="feedback__radio--dunno">Скорее негативное</label>
+                               for="feedback__radio--dunno">Затрудняюсь ответить</label>
                     </div>
                 </section>
                 <section class="feedback__sights">
@@ -138,14 +143,14 @@
         <footer class="page-footer">
             <b class="page-footer__title">#Visitsedona</b>
             <ul class="social">
-                <li class="social__item">
-                    <a class="social__link social__link--twitter" href="https://twitter.com/htmlacademy"></a>
+                <li class="social__item social__item--twitter">
+                    <a class="social__link social__link--twitter" href="#"></a>
                 </li>
-                <li class="social__item">
-                    <a class="social__link social__link--facebook" href="https://facebook.com/htmlacademy"></a>
+                <li class="social__item social__item--facebook">
+                    <a class="social__link social__link--facebook" href="#"></a>
                 </li>
-                <li class="social__item">
-                    <a class="social__link social__link--vk" href="https://vk.com/htmlacademy"></a>
+                <li class="social__item social__item--youtube">
+                    <a class="social__link social__link--youtube" href="#"></a>
                 </li>
             </ul>
             <div class="copyright">
@@ -155,12 +160,12 @@
             </div>
         </footer>
         <!-- всплывающие окна в случае корректного и некорректного ввода данных -->
-        <div class="popup popup--failure" style="display: none;">
+        <div class="popup popup--failure">
             <b class="popup__title popup__title-failure">Что-то пошло не так!</b>
             <p class="popup__desc popup__desc--failure">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
             <button class="button popup__close popup__close--failure" type="button">OK</button>
         </div>
-        <div class="popup popup--success" style="display: none;">
+        <div class="popup popup--success">
             <b class="popup__title popup__title-success">Ваш отзыв отправлен!</b>
             <p class="popup__desc popup__desc--success">Спасибо за ваше участие, ваш отзыв уже поступил к нам.<br>
                 В ближайшее время мы опубликуем его на сайте.</p>
@@ -168,5 +173,7 @@
                 <button class="button popup__close popup__close--success" type="button">Закрыть окно</button>
             </div>
         </div>
+        <script src="js/main.js"></script>
+        <script src="js/review.js"></script>
     </body>
 </html>

@@ -35,15 +35,36 @@
 
   .video__player {
     position: relative;
-    outline: 1px red solid;
+    background-size: 100%;
     @media (min-width: $mobile) {
-      width: 100%;
+      width: 280px;
       height: 201px;
+      margin: 0 auto;
+      background: url("../../img/video-mobile@1x.jpg") no-repeat;
+      background-size: inherit;
+    }
+    @media (min-resolution: 2dppx) and (min-width: $mobile) {
+      background: url("../../img/video-mobile@2x.jpg") no-repeat;
+      background-size: cover;
     }
     @media (min-width: $tablet) {
-      @include sedona_container();
-      max-width: 800px;
+      width: 648px;
       height: 500px;
+      background: url("../../img/video-tablet@1x.jpg") no-repeat;
+      background-size: 100%;
+    }
+    @media (min-resolution: 2dppx) and (min-width: $tablet) {
+      background: url("../../img/video-tablet@2x.jpg") no-repeat;
+      background-size: 100%;
+    }
+    @media (min-width: $desktop) {
+      width: 800px;
+      background: url("../../img/video-tablet@1x.jpg") no-repeat;
+      background-size: 100%;
+    }
+    @media (min-resolution: 2dppx) and (min-width: $desktop) {
+      background: url("../../img/video-desktop@2x.jpg") no-repeat;
+      background-size: 100%;
     }
     .video__controls {
       @include sedona_container();
@@ -63,7 +84,7 @@
         height: 23px;
         .video__timescale {
           position: relative;
-          background: rgba(0, 0, 0, 0.2);
+          background: rgba(219, 219, 219, 0.2);
           height: 3px;
           @media (min-width: $mobile) {
             margin: 22px 22px 0;
@@ -93,7 +114,6 @@
         > div {
           cursor: pointer;
           position: absolute;
-          outline: 1px blue solid;
           @media (min-width: $mobile) {
             top: 22px;
             height: 20px;
@@ -101,15 +121,28 @@
           @media (min-width: $tablet) {
             top: -32px;
           }
+          &:hover {
+            @media (min-width: $tablet) {
+              opacity: 0.6;
+            }
+          }
+          &:active {
+            @media (min-width: $mobile) {
+              opacity: 0.3;
+            }
+          }
         }
 
-        .video__back {
+        .video__replay {
           width: 16px;
           @media (min-width: $mobile) {
             left: 25px;
+            background: url("../../img/icon-video-replay.svg");
           }
           @media (min-width: $tablet) {
             left: 35px;
+            background: url("../../img/icon-video-replay.png");
+            background-size: 100%;
           }
         }
 
@@ -117,9 +150,11 @@
           width: 32px;
           @media (min-width: $mobile) {
             right: 74px;
+            background: url("../../img/icon-video-subtitles.svg");
           }
           @media (min-width: $tablet) {
             right: 92px;
+            background: url("../../img/icon-video-subtitles.png");
           }
         }
 
@@ -127,9 +162,11 @@
           width: 20px;
           @media (min-width: $mobile) {
             right: 23px;
+            background: url("../../img/icon-video-fullscreen.svg");
           }
           @media (min-width: $tablet) {
             right: 41px;
+            background: url("../../img/icon-video-fullscreen.png") no-repeat;
           }
         }
       }

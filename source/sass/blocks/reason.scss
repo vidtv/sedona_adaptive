@@ -38,11 +38,20 @@
 }
 
 @for $i from 1 through 3 {
-  .page-main > .reason:nth-of-type(#{$i}) {
+  .page-index > .reason:nth-of-type(#{$i}) {
     background: $light-blue;
     color: white;
     @media (min-width: $tablet) {
       display: flex;
+    }
+
+    /* распорка для тянущейся высоты блока */
+    &:before {
+      @media (min-width: $tablet) {
+        content: "";
+        padding-top: 33.3333%;
+        float: left;
+      }
     }
 
     .reason__wrapper {
@@ -51,7 +60,7 @@
       }
       @media (min-width: $tablet) {
         width: 33.33%;
-        padding: 45px 0;
+        margin: auto 0;
       }
       @media (min-width: $desktop) {
         padding: 58px 0;
@@ -75,10 +84,75 @@
       background: chartreuse;
       flex-grow: 1;
       @media (min-width: $mobile) {
-        height: 260px;
+        min-height: 260px;
+        overflow: hidden;
       }
       @media (min-width: $tablet) {
+        min-height: 256px;
         height: inherit;
+        overflow: hidden;
+      }
+    }
+
+    .reason__image:before {
+      @media (max-width: $tablet - 1) {
+        content: "";
+        padding-top: 80%;
+        float: left;
+      }
+    }
+
+    .reason__image--first {
+      @media (min-width: $mobile) {
+        background: url("../../img/main-city-mobile@1x.jpg") no-repeat;
+        background-size: 100%;
+      }
+      @media (min-width: $mobile) and (min-resolution: 2dppx) {
+        background: url("../../img/main-city-mobile@2x.jpg") no-repeat;
+        background-size: 100%;
+      }
+      @media (min-width: $tablet) {
+        background: url("../../img/main-city-tablet@1x.jpg") no-repeat;
+        background-size: 100%;
+      }
+      @media (min-width: $tablet) and (min-resolution: 2dppx) {
+        background: url("../../img/main-city-tablet@2x.jpg") no-repeat;
+        background-size: 100%;
+      }
+      @media (min-width: $desktop) {
+        background: url("../../img/main-city-desktop@1x.jpg") no-repeat;
+        background-size: 100%;
+      }
+      @media (min-width: $desktop) and (min-resolution: 2dppx) {
+        background: url("../../img/main-city-desktop@2x.jpg") no-repeat;
+        background-size: 100%;
+      }
+    }
+
+    .reason__image--second {
+      @media (min-width: $mobile) {
+        background: url("../../img/main-bridge-mobile@1x.jpg") no-repeat;
+        background-size: 100%;
+      }
+      @media (min-width: $mobile) and (min-resolution: 2dppx) {
+        background: url("../../img/main-bridge-mobile@2x.jpg") no-repeat;
+        background-size: 100%;
+      }
+      @media (min-width: $tablet) {
+        background: url("../../img/main-bridge-tablet@1x.jpg") no-repeat;
+        background-size: 100%;
+      }
+      @media (min-width: $tablet) and (min-resolution: 2dppx) {
+        background: url("../../img/main-bridge-tablet@2x.jpg") no-repeat;
+        background-size: 100%;
+      }
+      @media (min-width: $desktop) {
+        background: url("../../img/main-bridge-desktop@1x.jpg") no-repeat;
+        background-size: 100%;
+      }
+      @media (min-width: $desktop) and (min-resolution: 2dppx) {
+        background: url("../../img/main-bridge-desktop@2x.jpg") no-repeat;
+        background-size: 100%;
       }
     }
   }
@@ -95,13 +169,6 @@
   }
   .reason {
     background: #eeeeee;
-    padding: 30px 0;
-    @media (min-width: $mobile) {
-      @include sedona_border();
-      &:last-of-type {
-        border: none;
-      }
-    }
     @media (min-width: $tablet) {
       width: 33.33%;
       border: none;
@@ -111,15 +178,23 @@
       padding-bottom: 67px;
     }
 
-    .reason__desc {
-      @media (min-width: $mobile) {
-        width: 260px;
+    .reason__wrapper {
+      @media (max-width: $tablet - 1) {
+        @include sedona_container();
+        @include sedona_border();
+        padding: 30px 0;
       }
-      @media (min-width: $tablet) {
-        width: 150px;
-      }
-      @media (min-width: $desktop) {
-        width: 265px;
+
+      .reason__desc {
+        @media (min-width: $mobile) {
+          width: 260px;
+        }
+        @media (min-width: $tablet) {
+          width: 150px;
+        }
+        @media (min-width: $desktop) {
+          width: 265px;
+        }
       }
     }
   }
