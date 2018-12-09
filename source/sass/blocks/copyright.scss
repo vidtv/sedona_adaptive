@@ -28,7 +28,27 @@
         content: "";
         width: 27px;
         height: 34px;
-        background: url("../../img/logo-htmlacademy.svg");
+        -webkit-mask-image: url("../../img/logo-htmlacademy.svg"); // для Chrome
+        mask-image: url("../../img/logo-htmlacademy.svg");
+        background-color: black;
+      }
+      &:hover:after {
+        background-color: $light-blue;
+      }
+      &:active:after {
+        background-color: rgba(178,178,178,0.3);
+      }
+      /* IE11 хак */
+      @media all and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+        &:after {
+          background: url("../../img/logo-htmlacademy.svg") rgba(255,255,255,1);
+        }
+        &:hover:after {
+          background: url("../../img/logo-htmlacademy-hover.svg");
+        }
+        &:active:after {
+          background: url("../../img/logo-htmlacademy-active.svg");
+        }
       }
     }
   }

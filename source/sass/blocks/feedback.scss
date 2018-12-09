@@ -69,6 +69,7 @@
   .feedback__checkbox,
   .feedback__radio {
     margin: 0 65px 0 0;
+    visibility: hidden;
   }
 
   .feedback__label--radio,
@@ -288,7 +289,16 @@
       }
 
       .feedback__label--radio:before {
-        background: url("../../img/circle.svg");
+        //background: url("../../img/circle.svg");
+        -webkit-mask-image: url("../../img/circle.svg");
+        mask-image: url("../../img/circle.svg");
+      }
+
+      /* стили для IE10+ */
+      @media all and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+        .feedback__label--radio:before {
+          background: url("../../img/circle.svg");
+        }
       }
 
       .feedback__radio:checked + .feedback__label--radio:before {
@@ -363,11 +373,19 @@
         }
 
         .feedback__label--checkbox:before {
-          background: url("../../img/rect.svg");
+          mask-image: url("../../img/rect.svg");
+          -webkit-mask-image: url("../../img/rect.svg");
+        }
+
+        /* стили для IE10+ */
+        @media all and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+          .feedback__label--checkbox:before {
+            background: url("../../img/rect.svg");
+          }
         }
 
         .feedback__checkbox:checked + .feedback__label--checkbox:before {
-          background: url("../../img/icon-tick.svg") no-repeat 50% 50%, url("../../img/rect.svg");
+          background: url("../../img/icon-tick.svg") 50% 50% no-repeat, url("../../img/rect.svg");
         }
       }
     }
@@ -427,6 +445,29 @@
   &__sights:after {
     @media (min-width: $tablet) {
       top: 45px;
+    }
+  }
+
+  .feedback__label--radio:before,
+  .feedback__label--checkbox:before {
+    background-color: rgb(242,242,242);
+  }
+
+  .feedback__label--radio:hover:before,
+  .feedback__label--checkbox:hover:before {
+    background-color: rgb(229,229,229);
+  }
+
+  .feedback__label--radio:active:before,
+  .feedback__label--checkbox:active:before {
+    background-color: rgb(213,213,213);
+  }
+
+  /* цвет без изменения при наведении в IE10+ */
+  @media all and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    .feedback__label--radio:hover:before,
+    .feedback__label--checkbox:hover:before {
+      background-color: transparent;
     }
   }
 

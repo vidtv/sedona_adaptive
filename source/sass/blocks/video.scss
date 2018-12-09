@@ -121,6 +121,16 @@
           @media (min-width: $tablet) {
             top: -32px;
           }
+          &:hover {
+            @media (min-width: $tablet) {
+              opacity: 0.6;
+            }
+          }
+          &:active {
+            @media (min-width: $mobile) {
+              opacity: 0.3;
+            }
+          }
         }
 
         .video__replay {
