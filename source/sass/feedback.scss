@@ -1,5 +1,5 @@
-@import "../variables",
-"../mixins";
+@import "variables",
+"mixins";
 
 .feedback {
 
@@ -208,7 +208,7 @@
       .feedback__email,
       .feedback__input--invalid {
         position: relative;
-        &:after {
+        &::after {
           display: block;
           content: "";
           position: absolute;
@@ -218,7 +218,7 @@
           background: rgb(230,230,230) no-repeat 50% 50%;
         }
         @media (max-width: $desktop - 1) {
-          &:after {
+          &::after {
             top: 36px;
           }
         }
@@ -229,8 +229,8 @@
           margin-right: 80px;
           flex-shrink: 1.15;
         }
-        &:after {
-          background-image: url("../../img/icon-phone.svg");
+        &::after {
+          background-image: url("../img/icon-phone.svg");
         }
         .feedback__hidden--desktop {
           @media (min-width: $desktop) {
@@ -239,8 +239,8 @@
         }
       }
 
-      .feedback__email:after {
-        background-image: url("../../img/icon-mail.svg");
+      .feedback__email::after {
+        background-image: url("../img/icon-mail.svg");
       }
     }
   }
@@ -289,20 +289,19 @@
       }
 
       .feedback__label--radio:before {
-        //background: url("../../img/circle.svg");
-        -webkit-mask-image: url("../../img/circle.svg");
-        mask-image: url("../../img/circle.svg");
+        -webkit-mask-image: url("../img/circle.svg");
+        mask-image: url("../img/circle.svg");
       }
 
       /* стили для IE10+ */
       @media all and (-ms-high-contrast: active), (-ms-high-contrast: none) {
         .feedback__label--radio:before {
-          background: url("../../img/circle.svg");
+          background: url("../img/circle.svg");
         }
       }
 
       .feedback__radio:checked + .feedback__label--radio:before {
-        background: url("../../img/circle-black.svg") no-repeat 50% 50%, url("../../img/circle.svg");
+        background: url("../img/circle-black.svg") no-repeat 50% 50%, url("../img/circle.svg");
       }
     }
   }
@@ -373,19 +372,19 @@
         }
 
         .feedback__label--checkbox:before {
-          mask-image: url("../../img/rect.svg");
-          -webkit-mask-image: url("../../img/rect.svg");
+          mask-image: url("../img/rect.svg");
+          -webkit-mask-image: url("../img/rect.svg");
         }
 
         /* стили для IE10+ */
         @media all and (-ms-high-contrast: active), (-ms-high-contrast: none) {
           .feedback__label--checkbox:before {
-            background: url("../../img/rect.svg");
+            background: url("../img/rect.svg");
           }
         }
 
         .feedback__checkbox:checked + .feedback__label--checkbox:before {
-          background: url("../../img/icon-tick.svg") 50% 50% no-repeat, url("../../img/rect.svg");
+          background: url("../img/icon-tick.svg") 50% 50% no-repeat, url("../img/rect.svg");
         }
       }
     }
