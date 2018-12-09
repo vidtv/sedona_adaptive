@@ -15,7 +15,8 @@
     background-color: #5496bd;
     color: rgba(255, 255, 255, 0.3); }
   .button:disabled {
-    background-color: #e5e5e5; }
+    background-color: #e5e5e5;
+    cursor: inherit; }
 
 /* основной цвет сайта */
 /* цвета при наведении и нажатии */
@@ -215,6 +216,7 @@
 .feedback .feedback__label--checkbox {
   position: absolute;
   text-transform: none;
+  cursor: pointer;
   font-weight: 700;
   font-size: 18px;
   line-height: 26px; }
@@ -349,10 +351,12 @@
       margin-bottom: 0; } }
 
 .feedback__contacts .feedback__wrapper .feedback__phone,
-.feedback__contacts .feedback__wrapper .feedback__email {
+.feedback__contacts .feedback__wrapper .feedback__email,
+.feedback__contacts .feedback__wrapper .feedback__input--invalid {
   position: relative; }
   .feedback__contacts .feedback__wrapper .feedback__phone:after,
-  .feedback__contacts .feedback__wrapper .feedback__email:after {
+  .feedback__contacts .feedback__wrapper .feedback__email:after,
+  .feedback__contacts .feedback__wrapper .feedback__input--invalid:after {
     display: block;
     content: "";
     position: absolute;
@@ -362,7 +366,8 @@
     background: #e6e6e6 no-repeat 50% 50%; }
   @media (max-width: 1199px) {
     .feedback__contacts .feedback__wrapper .feedback__phone:after,
-    .feedback__contacts .feedback__wrapper .feedback__email:after {
+    .feedback__contacts .feedback__wrapper .feedback__email:after,
+    .feedback__contacts .feedback__wrapper .feedback__input--invalid:after {
       top: 36px; } }
 
 @media (min-width: 1200px) {
@@ -587,9 +592,10 @@
 .feedback .feedback__send--container .feedback__send {
   border: none;
   padding: 18px 0; }
-  @media (min-width: 320px) and (max-width: 767px) {
+  @media (max-width: 767px) {
     .feedback .feedback__send--container .feedback__send {
-      margin: 0 auto !important; } }
+      margin: 0 auto !important;
+      width: 100%; } }
   @media (min-width: 768px) {
     .feedback .feedback__send--container .feedback__send {
       width: 324px; } }
@@ -693,6 +699,7 @@
 .feedback .feedback__label--checkbox {
   position: absolute;
   text-transform: none;
+  cursor: pointer;
   font-weight: 700;
   font-size: 18px;
   line-height: 26px; }
@@ -827,10 +834,12 @@
       margin-bottom: 0; } }
 
 .feedback__contacts .feedback__wrapper .feedback__phone,
-.feedback__contacts .feedback__wrapper .feedback__email {
+.feedback__contacts .feedback__wrapper .feedback__email,
+.feedback__contacts .feedback__wrapper .feedback__input--invalid {
   position: relative; }
   .feedback__contacts .feedback__wrapper .feedback__phone:after,
-  .feedback__contacts .feedback__wrapper .feedback__email:after {
+  .feedback__contacts .feedback__wrapper .feedback__email:after,
+  .feedback__contacts .feedback__wrapper .feedback__input--invalid:after {
     display: block;
     content: "";
     position: absolute;
@@ -840,7 +849,8 @@
     background: #e6e6e6 no-repeat 50% 50%; }
   @media (max-width: 1199px) {
     .feedback__contacts .feedback__wrapper .feedback__phone:after,
-    .feedback__contacts .feedback__wrapper .feedback__email:after {
+    .feedback__contacts .feedback__wrapper .feedback__email:after,
+    .feedback__contacts .feedback__wrapper .feedback__input--invalid:after {
       top: 36px; } }
 
 @media (min-width: 1200px) {
@@ -1065,9 +1075,10 @@
 .feedback .feedback__send--container .feedback__send {
   border: none;
   padding: 18px 0; }
-  @media (min-width: 320px) and (max-width: 767px) {
+  @media (max-width: 767px) {
     .feedback .feedback__send--container .feedback__send {
-      margin: 0 auto !important; } }
+      margin: 0 auto !important;
+      width: 100%; } }
   @media (min-width: 768px) {
     .feedback .feedback__send--container .feedback__send {
       width: 324px; } }
@@ -1154,7 +1165,8 @@
     background-color: #5496bd;
     color: rgba(255, 255, 255, 0.3); }
   .button:disabled {
-    background-color: #e5e5e5; }
+    background-color: #e5e5e5;
+    cursor: inherit; }
 
 /* основной цвет сайта */
 /* цвета при наведении и нажатии */
@@ -1700,13 +1712,21 @@
 /* основной цвет сайта */
 /* цвета при наведении и нажатии */
 .popup {
-  outline: 1px blue solid;
+  background: white;
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
   text-align: center;
-  margin: 0 auto; }
+  margin: auto; }
   @media (min-width: 320px) {
     .popup {
       width: 280px;
-      padding: 40px 20px 35px; } }
+      padding: 40px 20px 35px;
+      box-shadow: 0 7px 15px 5px rgba(0, 0, 0, 0.15); } }
   @media (min-width: 768px) {
     .popup {
       width: 400px;
@@ -1753,10 +1773,12 @@
   @media (min-width: 320px) {
     .popup--success {
       width: 320px;
+      height: 278px;
       padding-top: 45px; } }
   @media (min-width: 768px) {
     .popup--success {
-      width: 648px; } }
+      width: 648px;
+      height: 302px; } }
   .popup--success .popup__title {
     width: 340px; }
   .popup--success .popup__desc {
@@ -1777,6 +1799,14 @@
     @media (min-width: 320px) {
       .popup--success .popup__button-container button {
         width: 100%; } }
+
+@media (min-width: 320px) {
+  .popup--failure {
+    height: 205px; } }
+
+@media (min-width: 768px) {
+  .popup--failure {
+    height: 237px; } }
 
 /* основной цвет сайта */
 /* цвета при наведении и нажатии */
@@ -2718,3 +2748,6 @@ body, .feedback .feedback__input--text,
   font-weight: 700;
   text-transform: uppercase;
   margin: 0; }
+
+.visible {
+  display: block; }

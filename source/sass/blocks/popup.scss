@@ -2,12 +2,20 @@
 "../mixins";
 
 .popup {
-  outline: 1px blue solid;
+  background: white;
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
   text-align: center;
-  margin: 0 auto;
+  margin: auto;
   @media (min-width: $mobile) {
     width: $mobile - 40px;
     padding: 40px 20px 35px;
+    box-shadow: 0 7px 15px 5px rgba(0,0,0,0.15);
   }
   @media (min-width: $tablet) {
     width: 400px;
@@ -60,11 +68,13 @@
 .popup--success {
   padding: 0;
   @media (min-width: $mobile) {
-    width: 320px;
+    width: $mobile;
+    height: 278px;
     padding-top: 45px;
   }
   @media (min-width: $tablet) {
     width: 648px;
+    height: 302px;
   }
 
   .popup__title {
@@ -96,4 +106,13 @@
   }
 
 
+}
+
+.popup--failure {
+  @media (min-width: $mobile) {
+    height: 205px;
+  }
+  @media (min-width: $tablet) {
+    height: 237px;
+  }
 }

@@ -75,6 +75,7 @@
   .feedback__label--checkbox {
     position: absolute;
     text-transform: none;
+    cursor: pointer;
     font-weight: $bold;
     font-size: 18px;
     line-height: 26px;
@@ -203,7 +204,8 @@
       }
 
       .feedback__phone,
-      .feedback__email {
+      .feedback__email,
+      .feedback__input--invalid {
         position: relative;
         &:after {
           display: block;
@@ -441,8 +443,9 @@
       @extend body;
       border: none;
       padding: 18px 0;
-      @media (min-width: $mobile) and (max-width: $tablet - 1) {
+      @media (max-width: $tablet - 1) {
         margin: 0 auto !important;
+        width: 100%;
       }
       @media (min-width: $tablet) {
         width: 324px;
