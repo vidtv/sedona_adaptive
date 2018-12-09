@@ -1,4 +1,4 @@
-@import "../variables";
+@import "variables";
 
 .social {
   display: flex;
@@ -29,12 +29,12 @@
   }
 
   .social__item--twitter {
-    background-image: url("../../img/icon-twitter.svg");
+    background-image: url("../img/icon-twitter.svg");
   }
   .social__item--facebook {
-    background-image: url("../../img/icon-facebook.svg");
+    background-image: url("../img/icon-facebook.svg");
   }
   .social__item--youtube {
-    background-image: url("../../img/icon-youtube.svg");
+    background-image: url("../img/icon-youtube.svg");
   }
 }

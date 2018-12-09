@@ -1,4 +1,4 @@
-@import "../variables";
+@import "variables";
 
 .likes {
   display: flex;
@@ -8,10 +8,10 @@
     height: 21px;
     margin-right: 15px;
     @media (min-width: $mobile) {
-       background: url("../../img/like-icon-mobile.png");
+       background: url("../img/like-icon-mobile.png");
     }
     @media (min-width: $desktop) {
-      background: url("../../img/like-icon-desktop.png");
+      background: url("../img/like-icon-desktop.png");
     }
   }
 

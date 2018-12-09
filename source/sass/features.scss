@@ -1,5 +1,5 @@
-@import "../variables",
-"../mixins";
+@import "variables",
+"mixins";
 
 .features {
   @media (max-width: $tablet - 1) {
@@ -74,7 +74,6 @@
 
     &:before {
       position: absolute;
-      //outline: 1px blue solid;
       @media (min-width: $mobile) {
         content: "";
         top: -55px;
@@ -95,17 +94,26 @@
   }
 
   .features__desc--house:before {
-    background: url("../../img/icon-house.svg") no-repeat 50% 50%;
+    background: url("../img/icon-house.svg") no-repeat 50% 50%;
     background-size: 100%;
   }
 
   .features__desc--burger:before {
-    background: url("../../img/icon-burger.svg") no-repeat 50% 50%;
+    background: url("../img/icon-burger.svg") no-repeat 50% 50%;
     background-size: 100%;
   }
 
   .features__desc--souvenir:before {
-    background: url("../../img/icon-gift.svg") no-repeat 50% 50%;
+    background: url("../img/icon-gift.svg") no-repeat 50% 50%;
     background-size: 85%;
+  }
+}
+
+.features__sedona-map {
+  display: block;
+  height: 350px;
+  @media (min-width: $desktop) {
+    width: $desktop;
+    margin: 0 auto;
   }
 }
